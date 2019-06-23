@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bdea90b4-e11c-4d73-8978-a0c6cb6be593" name="Default Changelist" comment="" />
+    <list default="true" id="bdea90b4-e11c-4d73-8978-a0c6cb6be593" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/_components/Footer/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/_components/Footer/Footer.jsx" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,11 +24,11 @@
         <counts>
           <entry key="Procfile" value="1" />
           <entry key="css" value="3" />
-          <entry key="gitignore" value="1" />
+          <entry key="gitignore" value="2" />
           <entry key="html" value="1" />
           <entry key="js" value="46" />
           <entry key="json" value="12" />
-          <entry key="jsx" value="19" />
+          <entry key="jsx" value="20" />
           <entry key="md" value="4" />
           <entry key="scss" value="5" />
           <entry key="tsx" value="1" />
@@ -35,10 +39,10 @@
           <entry key="CSS" value="3" />
           <entry key="HTML" value="1" />
           <entry key="JSON" value="12" />
-          <entry key="JSX Harmony" value="19" />
+          <entry key="JSX Harmony" value="20" />
           <entry key="JavaScript" value="46" />
           <entry key="Markdown" value="4" />
-          <entry key="PLAIN_TEXT" value="2" />
+          <entry key="PLAIN_TEXT" value="3" />
           <entry key="SCSS" value="5" />
           <entry key="TypeScript JSX" value="1" />
         </counts>
@@ -46,6 +50,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="1" />
+          <entry key="gitignore" value="8" />
           <entry key="html" value="1" />
           <entry key="js" value="61" />
           <entry key="json" value="45" />
@@ -60,6 +65,7 @@
           <entry key="JSON" value="45" />
           <entry key="JSX Harmony" value="21" />
           <entry key="JavaScript" value="61" />
+          <entry key="PLAIN_TEXT" value="8" />
           <entry key="SCSS" value="27" />
         </counts>
       </usages-collector>
@@ -71,7 +77,17 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client/src/_components/Footer/Footer.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="112">
+              <caret line="19" column="55" selection-start-line="19" selection-start-column="55" selection-end-line="19" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -102,6 +118,7 @@
       <find>css</find>
       <find>scss</find>
       <find>create</find>
+      <find>react-shop</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Vladyslav\Web Development\Projects\react-express-heroku</dir>
@@ -129,6 +146,8 @@
         <option value="$PROJECT_DIR$/client/src/index.js" />
         <option value="$PROJECT_DIR$/client/src/assets/scss/main.scss" />
         <option value="$PROJECT_DIR$/client/src/_components/Product/Gallery/Gallery.jsx" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/client/src/_components/Footer/Footer.jsx" />
       </list>
     </option>
   </component>
@@ -1326,6 +1345,7 @@
     <option name="width" value="495" />
     <option name="height" value="685" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -1373,21 +1393,6 @@
               <item name="Product" type="462c0819:PsiDirectoryNode" />
               <item name="Gallery" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="react-express-heroku" type="b2602c69:ProjectViewProjectNode" />
-              <item name="react-express-heroku" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="react-express-heroku" type="b2602c69:ProjectViewProjectNode" />
-              <item name="react-express-heroku" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="scss" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -1434,25 +1439,26 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1561290521756</updated>
-      <workItem from="1561290524333" duration="14349000" />
+      <workItem from="1561290524333" duration="15343000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14349000" />
+    <option name="totallyTimeSpent" value="15343000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="npm" side_tool="true" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24962178" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24962178" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="TypeScript" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.40491804" />
+      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.40491804" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -1619,13 +1625,6 @@
     <entry file="file://$PROJECT_DIR$/Procfile">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/node_modules/react-scripts/template/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -1748,6 +1747,20 @@
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/_components/Footer/Footer.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="19" column="55" selection-start-line="19" selection-start-column="55" selection-end-line="19" selection-end-column="55" />
         </state>
       </provider>
     </entry>

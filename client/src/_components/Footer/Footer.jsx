@@ -17,7 +17,7 @@ const Footer = () => (
         {' |'}
         <a
           className="footer__author"
-          href="//github.com/vladyslav-dmitriev/react-shop"
+          href="//github.com/vladyslav-dmitriev/js-shop"
           target="_blank"
           rel="noopener noreferrer"
         >
