@@ -1,0 +1,33 @@
+// colors
+$light: #fff;
+$black: #000;
+
+$gray--light: #F5F5F5;
+$gray--medium: #E0E0E0;
+$gray--dark: #737373;
+
+$accent: #FF6916;
+$accent-light: lighten($accent, 5);
+$accent-dark: darken($accent, 5);
+
+$overlay: rgba(0,0,0,.3);
+$success: #f00;
+
+// fonts
+$base-font: 'Ubuntu', sans-serif;
+
+// icons
+$icomoon-font-family: 'icomoon' !default;
+$icomoon-font-path: '../fonts/icomoon' !default;
+
+$icon-pencil: "\e905";
+$icon-file-text2: "\e926";
+$icon-cart: "\e93a";
+$icon-credit-card: "\e93f";
+$icon-phone: "\e942";
+$icon-envelop: "\e945";
+$icon-bubble2: "\e96e";
+$icon-user: "\e971";
+$icon-search: "\e986";
+$icon-equalizer: "\e992";
+$icon-cross: "\ea0f";

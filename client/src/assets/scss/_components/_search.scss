@@ -1,0 +1,86 @@
+@import '../variables',
+        '../mixins';
+
+.react-autosuggest {
+  &__container {
+    position: relative;
+    &::before {
+      position: absolute;
+      top: 13px;
+      left: 13px;
+      font-family: $icomoon-font-family;
+      content: $icon-search;
+      padding-right: 10px;
+      font-size: 16px;
+      color: $accent;
+    }
+  }
+  &__input {
+    width: 280px;
+    display: block;
+    height: 40px;
+    border: 1px solid $gray--medium;
+    padding: 0 12px 0 37px;
+    outline: none;
+    font-size: 15px;
+    &:focus {
+      outline: none;
+    }
+  }
+  &__suggestions-container {
+    display: none;
+  }
+  &__container--open {
+    & .react-autosuggest__suggestions-container {
+      display: block;
+      position: absolute !important;
+      top: 41px;
+      width: 100%;
+      border: 1px solid $gray--medium;
+      background-color: $light;
+      font-size: 16px;
+      z-index: 2;
+      max-height: 250px;
+      overflow-y: scroll;
+    }
+  }
+  &__suggestions-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  &__suggestion {
+    cursor: pointer;
+    padding: 10px 10px;
+    transition: all .22s ease;
+    color: $black;
+    font-size: 14px;
+    &:hover {
+      background: $accent;
+      color: $light;
+    }
+    &:not(:first-child) {
+      border-top: 1px solid #ddd;
+    }
+  }
+  &__custom-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  &__custom-picture {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__custom-image {
+    max-width: 30px;
+    max-height: 30px;
+  }
+  &__suggestion--highlighted {
+    background: $accent;
+    color: $light;
+  }
+}

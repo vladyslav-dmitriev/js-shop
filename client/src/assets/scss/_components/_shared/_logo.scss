@@ -1,0 +1,26 @@
+@import '../../variables',
+        '../../mixins';
+
+.logo {
+  font-size: 22px;
+  text-transform: uppercase;
+  @include weight--bold;
+  &:hover {
+    .logo__item_left {
+      color: $black;
+    }
+    .logo__item_right {
+      color: $accent;
+    }
+  }
+  &__item {
+    @include transition;
+    &_left {
+      color: $accent;
+    }
+    &_right {
+      color: $black;
+      margin-left: 7px;
+    }
+  }
+}

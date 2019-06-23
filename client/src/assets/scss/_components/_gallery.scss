@@ -1,0 +1,32 @@
+@import '../variables',
+        '../mixins';
+
+.image-gallery-thumbnail {
+  border: none;
+  border-bottom: 2px solid $black;
+  padding: 3px;
+  margin: 10px;
+  opacity: .6;
+  vertical-align: bottom;
+  @include transition;
+  & img {
+    max-height: 100px;
+    width: auto;
+  }
+  &.active {
+    border: none;
+    border-bottom: 2px solid $accent;
+    opacity: 1;
+  }
+}
+
+.image-gallery-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 230px;
+  & img {
+    max-height: 170px;
+    width: auto;
+  }
+}

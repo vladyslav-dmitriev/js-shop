@@ -1,0 +1,124 @@
+@import '../variables',
+        '../mixins';
+
+.reviews {
+  padding: 0 30px;
+  border: 1px solid $gray--medium;
+  margin-bottom: 30px;
+  &__title {
+    font-size: 20px;
+    color: $black;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    position: relative;
+    @include weight--bold;
+    &_list {
+      &::before {
+        font-family: $icomoon-font-family;
+        content: $icon-file-text2;
+        padding-right: 10px;
+        font-size: 15px;
+        color: $accent;
+      }
+    }
+    &_form {
+      &::before {
+        font-family: $icomoon-font-family;
+        content: $icon-pencil;
+        padding-right: 10px;
+        font-size: 15px;
+        color: $accent;
+      }
+    }
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__left-box {
+    padding: 26px 30px 30px 0;
+    flex: 0 1 auto;
+    width: 100%;
+    border-right: 1px solid $gray--medium;
+  }
+  &__right-box {
+    padding: 26px 0 30px;
+    flex: 1 0 auto;
+    width: 350px;
+    margin-left: 30px;
+  }
+  &__empty-message {
+    font-size: 17px;
+  }
+  &__item {
+    margin-bottom: 24px;
+    padding-bottom: 30px;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 40%;
+      height: 1px;
+      background-color: $gray--medium;
+    }
+    &:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      &::after {
+        display: none;
+      }
+    }
+  }
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  &__name {
+    color: $accent;
+    font-size: 18px;
+    @include weight--medium;
+  }
+  &__date {
+    color: $black;
+    font-size: 14px;
+  }
+  &__text {
+    word-wrap: break-word;
+    line-height: 1.5;
+  }
+  &__form-item {
+    margin-bottom: 15px;
+    &_name {
+      .input-text__box {
+        &::before {
+          content: $icon-user;
+        }
+      }
+    }
+    &_text {
+      .input-text__box {
+        &::before {
+          content: $icon-bubble2;
+        }
+      }
+    }
+  }
+  &__button {
+    border: none;
+    background: transparent;
+    padding: 0;
+    margin: 10px 0 0;
+    outline: none;
+    width: 100%;
+  }
+  &__success-message {
+    text-align: center;
+    color: $success;
+    margin-bottom: 8px;
+  }
+}

@@ -1,0 +1,32 @@
+@import '../../variables';
+
+.input-text {
+  &__title {
+    display: inline-block;
+    margin-bottom: 5px;
+    color: $black;
+  }
+  &__required {
+    color: $success;
+    margin-left: 2px;
+  }
+  &__box {
+    position: relative;
+    &::before {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      font-family: $icomoon-font-family;
+      color: $accent;
+    }
+  }
+  &__input {
+    width: 100%;
+    display: block;
+    height: 40px;
+    border: 1px solid $gray--medium;
+    padding: 0 13px 0 35px;
+    outline: none;
+    line-height: 1.2;
+  }
+}

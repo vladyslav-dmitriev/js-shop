@@ -1,0 +1,7 @@
+export const TELEGRAM_TOKEN = '728811285:AAES-Ag_Rnq07wIUkHaPJ_2PRXhGcCwiGOg';
+export const TELEGRAM_PROFILE = 429228903;
+
+export default {
+  TELEGRAM_TOKEN,
+  TELEGRAM_PROFILE,
+};

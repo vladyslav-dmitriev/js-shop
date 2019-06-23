@@ -1,0 +1,30 @@
+@import '../variables',
+        '../mixins';
+
+.cart {
+  &__box {
+    color: $black;
+    text-align: center;
+    padding: 70px 0;
+  }
+  &__title {
+    font-size: 26px;
+    margin-top: 40px;
+    @include weight--bold;
+  }
+  &__orderId {
+    font-size: 100px;
+    letter-spacing: 5px;
+    @include weight--bold;
+  }
+  &__capture {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  &__link {
+    color: $accent;
+    font-size: 20px;
+    display: inline-block;
+    @include weight--bold;
+  }
+}

@@ -1,0 +1,67 @@
+@import '../variables',
+        '../mixins';
+
+.filters {
+  padding: 15px 20px;
+  border: 1px solid $gray--medium;
+  &__main-title {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: $black;
+    padding-bottom: 15px;
+    border-bottom: 1px solid $gray--medium;
+    position: relative;
+    @include weight--medium;
+    &::before {
+      font-family: $icomoon-font-family;
+      content: $icon-equalizer;
+      padding-right: 10px;
+      font-size: 16px;
+      color: $accent;
+    }
+  }
+  &__item {
+    border-bottom: 1px solid $gray--medium;
+    padding: 12px 0 11px;
+    &:last-child {
+      border-bottom: 0;
+      padding-bottom: 3px;
+    }
+  }
+  &__title {
+    font-size: 16px;
+    margin-bottom: 12px;
+    color: $black;
+    text-transform: uppercase;
+    @include weight--medium;
+  }
+  &__container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6px;
+  }
+  &__marker {
+    border: 1px solid $gray--medium;
+    width: 17px;
+    height: 17px;
+    background: $light;
+    position: relative;
+  }
+  &__input {
+    display: none;
+    &:checked {
+      & + .filters__marker::before {
+        content: '';
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        width: 9px;
+        height: 9px;
+        background: $accent;
+      }
+    }
+  }
+  &__capture {
+    margin-left: 10px;
+  }
+}

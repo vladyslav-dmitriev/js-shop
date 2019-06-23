@@ -1,0 +1,55 @@
+@import '../../variables',
+        '../../mixins';
+
+.product-element {
+  display: block;
+  border: 1px solid $gray--medium;
+  text-align: center;
+  padding: 15px 10px;
+  color: $black;
+  @include transition;
+  &:hover {
+    border-color: $accent;
+    .product-element__name {
+      color: $accent;
+    }
+    .product-element__color {
+      color: $light;
+      background-color: $accent;
+      border-color: $accent;
+    }
+  }
+  &__name {
+    font-size: 18px;
+    height: 45px;
+    color: $black;
+    margin-top: 12px;
+    padding: 0 10px;
+    @include weight--bold;
+    @include transition;
+  }
+  &__picture {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__image {
+    height: auto;
+    max-height: 100%;
+  }
+  &__color {
+    display: inline-block;
+    border: 1px solid $gray--medium;
+    padding: 5px 25px 7px;
+    font-size: 13px;
+    margin-top: 15px;
+    @include transition;
+  }
+  &__price {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 10px;
+    @include weight--bold;
+  }
+}

@@ -1,0 +1,35 @@
+@import './_variables',
+        './base',
+        './icons';
+
+@import './_components/header',
+        './_components/footer',
+        './_components/home',
+        './_components/search',
+        './_components/slider',
+        './_components/recommendations',
+        './_components/not-found',
+        './_components/aside',
+        './_components/filters',
+        './_components/pagination',
+        './_components/products',
+        './_components/product',
+        './_components/product-modal',
+        './_components/reviews',
+        './_components/image-gallery-no-icon',
+        './_components/gallery',
+        './_components/cart';
+
+@import './_components/_shared/button',
+        './_components/_shared/input-text',
+        './_components/_shared/loading',
+        './_components/_shared/logo',
+        './_components/_shared/product-element',
+        './_components/_shared/product-loading';
+
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}

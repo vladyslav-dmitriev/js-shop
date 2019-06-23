@@ -1,0 +1,11 @@
+@mixin transition() {
+  transition: all .3s ease;
+}
+
+@mixin weight--medium() {
+  font-weight: 500;
+}
+
+@mixin weight--bold() {
+  font-weight: 700;
+}

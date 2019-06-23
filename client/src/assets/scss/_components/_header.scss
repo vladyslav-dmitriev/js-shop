@@ -1,0 +1,14 @@
+@import '../variables',
+        '../mixins';
+
+.header {
+  background: $gray--light;
+  border-bottom: 1px solid $gray--medium;
+  position: relative;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+  }
+}

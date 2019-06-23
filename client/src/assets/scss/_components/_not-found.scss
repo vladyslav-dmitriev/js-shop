@@ -1,0 +1,29 @@
+@import '../variables',
+        '../mixins';
+
+.not-found {
+  &__container {
+    text-align: center;
+    padding: 70px 0;
+    color: $black;
+    @include weight--bold;
+  }
+  &__code {
+    font-size: 120px;
+    letter-spacing: 5px;
+  }
+  &__title {
+    font-size: 24px;
+    text-transform: uppercase;
+    margin: 10px 0;
+  }
+  &__message {
+    font-size: 20px;
+  }
+  &__link {
+    color: $accent;
+    font-size: 20px;
+    display: inline-block;
+    margin: 20px 0;
+  }
+}

@@ -1,0 +1,17 @@
+@import '../variables',
+        '../mixins';
+
+.footer {
+  padding: 20px 0;
+  border-top: 1px solid $gray--medium;
+  background: $gray--light;
+  &__copyright {
+    text-align: center;
+  }
+  &__author {
+    display: inline-block;
+    margin-left: 4px;
+    color: $accent;
+    @include weight--medium;
+  }
+}

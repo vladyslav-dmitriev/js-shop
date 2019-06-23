@@ -1,0 +1,15 @@
+.products {
+ &__list {
+   display: flex;
+   flex-wrap: wrap;
+   padding-top: 50px;
+ }
+  &__emptyMessage {
+    padding: 0 10px;
+    font-size: 18px;
+  }
+  &__item {
+    width: calc(100% / 3 - 20px);
+    margin: 0 10px 20px;
+  }
+}

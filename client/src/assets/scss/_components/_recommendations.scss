@@ -1,0 +1,31 @@
+@import '../variables',
+        '../mixins';
+
+.recommendations {
+  &__container {
+    padding: 26px 30px 30px;
+    border: 1px solid $gray--medium;
+    margin-bottom: 30px;
+  }
+  &__title {
+    font-size: 20px;
+    color: $black;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    position: relative;
+    @include weight--bold;
+    &::before {
+      font-family: $icomoon-font-family;
+      content: $icon-cart;
+      padding-right: 10px;
+      font-size: 15px;
+      color: $accent;
+    }
+  }
+  &__box {
+    margin: 0 -10px;
+  }
+  &__item {
+    margin: 0 10px;
+  }
+}

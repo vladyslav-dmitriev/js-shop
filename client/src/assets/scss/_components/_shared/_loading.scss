@@ -1,0 +1,65 @@
+@import '../../variables',
+        '../../mixins';
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  50%, 75% {
+    transform: scale(2.5);
+  }
+  78%, 100% {
+    opacity: 0;
+  }
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  animation-delay: 1s;
+  margin: auto;
+  &__item {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 17px;
+    &::before {
+      content: '';
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      opacity: 0.7;
+      animation: scale 1.2s infinite cubic-bezier(0, 0, 0.49, 1.02);
+      transform: scale(1);
+      @include transition;
+    }
+    &_1 {
+      background-color: $accent-light;
+      &::before {
+        background-color: $accent-light;
+        animation-delay: 50ms;
+      }
+    }
+    &_2 {
+      background-color: $accent;
+      &::before {
+        background-color: $accent;
+        animation-delay: 100ms;
+      }
+    }
+    &_3 {
+      background-color: $accent-dark;
+      &::before {
+        background-color: $accent-dark;
+        animation-delay: 150ms;
+      }
+    }
+  }
+}

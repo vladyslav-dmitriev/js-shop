@@ -1,0 +1,27 @@
+@import '../variables',
+        '../mixins';
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  &__item {
+    margin: 0 9px;
+    padding: 13px 20px;
+    border: 1px solid $gray--medium;
+    cursor: pointer;
+    color: $black;
+    @include transition;
+    &_active {
+      background: $accent;
+      border-color: $accent;
+      color: $light;
+    }
+    &:hover {
+      background: $accent;
+      border-color: $accent;
+      color: $light;
+    }
+  }
+}
