@@ -49,4 +49,4 @@ const mapStateToProps = state => ({
   reviews: state.reviews,
 });
 
-export default connect(mapStateToProps, {})(Reviews);
+export default connect(mapStateToProps)(Reviews);

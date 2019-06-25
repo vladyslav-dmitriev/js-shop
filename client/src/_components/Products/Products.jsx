@@ -30,4 +30,4 @@ const mapStateToProps = state => ({
   products: state.products,
 });
 
-export default connect(mapStateToProps, {})(Products);
+export default connect(mapStateToProps)(Products);

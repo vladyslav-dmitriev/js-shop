@@ -26,9 +26,7 @@ class ProductInfo extends Component {
     isModalVisible: false,
   };
 
-  handleChangeModalVisibility = () => {
-    this.setState(prevState => ({ isModalVisible: !prevState.isModalVisible }));
-  };
+  handleChangeModalVisibility = () => this.setState(prevState => ({ isModalVisible: !prevState.isModalVisible }));
 
   render() {
     const { isModalVisible } = this.state;
@@ -36,16 +34,12 @@ class ProductInfo extends Component {
 
     return (
       <div className="product">
-        {
-          isModalVisible
-            ? (
-              <Modal
-                product={product}
-                handleChangeModalVisibility={this.handleChangeModalVisibility}
-              />
-            )
-            : null
-        }
+        {isModalVisible && (
+          <Modal
+            product={product}
+            handleChangeModalVisibility={this.handleChangeModalVisibility}
+          />
+        )}
         <WithLoading isLoading={productLoading}>
           <ProductInfoBlock
             product={product}

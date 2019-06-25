@@ -1,5 +1,3 @@
-import { API_KEY } from './app.constants';
-
 export const PRODUCTS_URL = '/api/products';
 
 /* get all products */
@@ -19,7 +17,6 @@ export const PRODUCT_RESET = 'PRODUCT_RESET';
 export const FETCH_PRODUCT = 'FETCH_PRODUCT';
 
 export default {
-  API_KEY,
   PRODUCTS_URL,
   PRODUCTS_ALL,
   PRODUCTS_REQUEST,

@@ -1,5 +1,3 @@
-import { API_KEY } from './app.constants';
-
 export const ORDER_URL = '/api/order';
 
 /* create order */
@@ -11,7 +9,6 @@ export const ORDER_RESET = 'ORDER_RESET';
 export const ORDER_CREATE_SUCCESS = 'ORDER_CREATE_SUCCESS';
 
 export default {
-  API_KEY,
   ORDER_URL,
   ORDER_CREATE,
   ORDER_REQUEST,

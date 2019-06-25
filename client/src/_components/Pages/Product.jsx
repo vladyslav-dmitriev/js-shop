@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
-import { productsActions } from '../../_actions';
+import {productsActions, recommendationsActions} from '../../_actions';
 import { getIdFromUrl } from '../../_helpers/utils';
 import { pathsConstants } from '../../_constants';
 
@@ -81,6 +81,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   getProductByIdAction: id => dispatch(productsActions.getProductById(id)),
+  getRecommendationsAction: () => dispatch(recommendationsActions.getRecommendations()),
 });
 
 Product.propTypes = propTypes;

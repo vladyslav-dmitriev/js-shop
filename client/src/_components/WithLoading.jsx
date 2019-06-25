@@ -11,8 +11,6 @@ const defaultProps = {
   isLoading: false,
 };
 
-/* styles */
-
 const WithLoading = ({ children, isLoading }) => (
   isLoading
     ? <Loading />

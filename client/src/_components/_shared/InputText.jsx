@@ -36,7 +36,7 @@ class InputText extends Component {
       <div className="input-text">
         <div className="input-text__title">
           {title}
-          { required && <span className="input-text__required">*</span> }
+          {required && <span className="input-text__required">*</span>}
         </div>
         <div className="input-text__box">
           <input

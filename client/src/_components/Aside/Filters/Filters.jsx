@@ -6,7 +6,7 @@ import { filtersActions, productsActions } from '../../../_actions';
 import FilterBlock from './FilterBlock';
 
 const propTypes = {
-  params: PropTypes.shape({}).isRequired,
+  params: PropTypes.shape({}),
   filters: PropTypes.shape({}).isRequired,
   getFiltersAction: PropTypes.func.isRequired,
   getAllProductsAction: PropTypes.func.isRequired,

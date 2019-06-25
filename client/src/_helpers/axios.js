@@ -1,12 +1,11 @@
 import axios from 'axios';
-import { SERVER_URL, FETCH_TIMEOUT, API_TOKEN } from '../_constants/app.constants';
+import { SERVER_URL, FETCH_TIMEOUT } from '../_constants/app.constants';
 
 const instance = axios.create({
   baseURL: SERVER_URL,
   timeout: FETCH_TIMEOUT,
   headers: {
     'Content-Type': 'application/json;charset=utf-8',
-    'secret-key': API_TOKEN,
   },
 });
 

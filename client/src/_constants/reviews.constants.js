@@ -1,5 +1,3 @@
-import { API_KEY } from './app.constants';
-
 export const REVIEWS_URL = '/api/reviews';
 
 /* get all reviews */
@@ -18,7 +16,6 @@ export const REVIEW_ADD = 'REVIEW_ADD';
 export const REVIEW_ADD_TO_REVIEWS = 'REVIEW_ADD_TO_REVIEWS';
 
 export default {
-  API_KEY,
   REVIEWS_FETCH,
   REVIEWS_REQUEST,
   REVIEWS_SUCCESS,

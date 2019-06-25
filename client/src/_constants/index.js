@@ -4,7 +4,7 @@ export { default as productsConstants } from './products.constants';
 export { default as searchConstants } from './search.constants';
 export { default as orderConstants } from './order.constants';
 export { default as recommendationsConstants } from './recommendations.constants';
-export { default as mapConstants } from './map.constants';
 export { default as reviewsConstants } from './reviews.constants';
 export { default as filtersConstants } from './filters.constants';
 export { default as paginationConstants } from './pagination.constants';
+export { default as appConstants } from './app.constants';

@@ -19,6 +19,7 @@ const defaultProps = {};
 class Form extends Component {
   state = {
     ...getUserDataFromLocalStorage('name', 'email', 'phone'),
+    // ...getUserDataFromLocalStorage(['name', 'email', 'phone']),
   };
 
   handleChangeInput = (event, name) => {
