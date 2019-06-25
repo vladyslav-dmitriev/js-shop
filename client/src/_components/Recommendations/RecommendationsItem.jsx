@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import ProductElement from '../_shared/ProductElement/ProductElement';
+import ProductElement from '../_shared/ProductElement';
 
 const propTypes = {
   recommendation: PropTypes.shape({

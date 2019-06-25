@@ -9,8 +9,6 @@ import Products from '../Products';
 import Pagination from '../Pagination';
 
 const propTypes = {
-  getAllProducts: PropTypes.func.isRequired,
-  saveFiltersParams: PropTypes.func.isRequired,
   productsLoading: PropTypes.bool,
   products: PropTypes.arrayOf(
     PropTypes.shape({
@@ -18,6 +16,8 @@ const propTypes = {
       name: PropTypes.string.isRequired,
     }).isRequired,
   ).isRequired,
+  getAllProductsAction: PropTypes.func.isRequired,
+  saveFiltersParamsAction: PropTypes.func.isRequired,
 };
 
 const defaultProps = {
@@ -26,8 +26,8 @@ const defaultProps = {
 
 class Home extends Component {
   componentDidMount() {
-    this.props.getAllProducts({ page: 1 });
-    this.props.saveFiltersParams({ page: 1 });
+    this.props.getAllProductsAction({ page: 1 });
+    this.props.saveFiltersParamsAction({ page: 1 });
   }
 
   render() {
@@ -60,8 +60,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  getAllProducts: params => dispatch(productsActions.getAllProducts(params)),
-  saveFiltersParams: params => dispatch(filtersActions.saveFiltersParams(params)),
+  getAllProductsAction: params => dispatch(productsActions.getAllProducts(params)),
+  saveFiltersParamsAction: params => dispatch(filtersActions.saveFiltersParams(params)),
 });
 
 Home.propTypes = propTypes;

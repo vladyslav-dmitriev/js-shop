@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { Redirect } from 'react-router-dom';
 import { getUserDataFromLocalStorage, saveUserDataToLocalStorage } from '../../../_helpers/utils';
-import { orderActions } from '../../../_actions/index';
+import { orderActions } from '../../../_actions';
+import { pathsConstants } from '../../../_constants';
 
-import InputText from '../../_shared/InputText/index';
-import Button from '../../_shared/Button/index';
+import InputText from '../../_shared/InputText';
+import Button from '../../_shared/Button';
 
 const propTypes = {
-  createOrder: PropTypes.func.isRequired,
-  handleOrderCreate: PropTypes.func.isRequired,
   productId: PropTypes.number.isRequired,
+  createOrderAction: PropTypes.func.isRequired,
 };
 
 const defaultProps = {};
@@ -20,32 +21,14 @@ class Form extends Component {
     ...getUserDataFromLocalStorage('name', 'email', 'phone'),
   };
 
-  static getDerivedStateFromProps(nextProps, prevState) {
-    const { order, handleOrderCreate } = nextProps;
-
-    if (prevState.isOrderCreate === undefined) {
-      return {
-        isOrderCreate: nextProps.isOrderCreate,
-      };
-    }
-
-    if (order && !prevState.isOrderCreate) {
-      handleOrderCreate(true, order);
-      return {
-        isOrderCreate: true,
-      };
-    }
-    return null;
-  }
-
   handleChangeInput = (event, name) => {
     this.setState({ [name]: event.target.value });
   };
 
-  sendForm = (event) => {
+  sendForm = async(event) => {
     event.preventDefault();
 
-    const { productId, createOrder, handleOrderCreate } = this.props;
+    const { productId, createOrderAction } = this.props;
     const { name, phone, email } = this.state;
     const order = {
       product: productId,
@@ -53,9 +36,9 @@ class Form extends Component {
       phone,
       email,
     };
-    handleOrderCreate(false);
-    createOrder(order);
     saveUserDataToLocalStorage({ name, phone, email });
+    const { data: orderId } = await createOrderAction(order);
+    await this.setState({ orderId });
   };
 
   render() {
@@ -63,7 +46,14 @@ class Form extends Component {
       name,
       phone,
       email,
+      orderId,
     } = this.state;
+
+    if (orderId) {
+      return (
+        <Redirect push to={{ pathname: pathsConstants.CART_PAGE, state: { orderId } }} />
+      )
+    }
 
     return (
       <div>
@@ -104,15 +94,11 @@ class Form extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  order: state.order,
-});
-
 const mapDispatchToProps = dispatch => ({
-  createOrder: order => dispatch(orderActions.createOrder(order)),
+  createOrderAction: order => dispatch(orderActions.createOrder(order)),
 });
 
 Form.propTypes = propTypes;
 Form.defaultProps = defaultProps;
 
-export default connect(mapStateToProps, mapDispatchToProps)(Form);
+export default connect(null, mapDispatchToProps)(Form);

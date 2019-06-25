@@ -8,8 +8,8 @@ import PaginationItem from './PaginationItem';
 const propTypes = {
   params: PropTypes.shape({}).isRequired,
   pagination: PropTypes.oneOfType([PropTypes.number, PropTypes.shape({})]).isRequired,
-  getAllProducts: PropTypes.func.isRequired,
-  saveFiltersParams: PropTypes.func.isRequired,
+  getAllProductsAction: PropTypes.func.isRequired,
+  saveFiltersParamsAction: PropTypes.func.isRequired,
 };
 
 const defaultProps = {};
@@ -36,15 +36,15 @@ class Pagination extends Component {
   handleChangePage = (page) => {
     const {
       params,
-      getAllProducts,
-      saveFiltersParams,
+      getAllProductsAction,
+      saveFiltersParamsAction,
     } = this.props;
 
     const paramsForSave = { ...params, page };
     const paramsForRequest = { ...params.filters, page };
 
-    saveFiltersParams(paramsForSave);
-    getAllProducts(paramsForRequest);
+    saveFiltersParamsAction(paramsForSave);
+    getAllProductsAction(paramsForRequest);
   };
 
   render() {
@@ -67,8 +67,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  getAllProducts: params => dispatch(productsActions.getAllProducts(params)),
-  saveFiltersParams: params => dispatch(filtersActions.saveFiltersParams(params)),
+  getAllProductsAction: params => dispatch(productsActions.getAllProducts(params)),
+  saveFiltersParamsAction: params => dispatch(filtersActions.saveFiltersParams(params)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Pagination);

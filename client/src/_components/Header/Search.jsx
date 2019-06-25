@@ -3,14 +3,11 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Autosuggest from 'react-autosuggest'; // https://github.com/moroshko/react-autosuggest#render-input-component-prop
 import { Scrollbars } from 'react-custom-scrollbars'; // https://github.com/malte-wessel/react-custom-scrollbars
-import { searchActions } from '../../../_actions';
-import { pathsConstants } from '../../../_constants';
+import { searchActions } from '../../_actions';
+import { pathsConstants } from '../../_constants';
 
 const propTypes = {
-  getSearchWithQuery: PropTypes.func.isRequired,
-  search: PropTypes.arrayOf(
-    PropTypes.shape({}).isRequired,
-  ).isRequired,
+  getSearchWithQueryAction: PropTypes.func.isRequired,
 };
 
 const defaultProps = {};
@@ -60,18 +57,20 @@ const renderSuggestion = suggestion => (
 class Search extends Component {
   state = {
     value: '',
+    items: [],
   };
 
   handleChangeInput = (event, { newValue }) => {
     this.setState({ value: newValue });
   };
 
-  onSuggestionsFetchRequested = ({ value }) => {
-    this.props.getSearchWithQuery(value);
+  onSuggestionsFetchRequested = async({ value }) => {
+    const { data: items } = await this.props.getSearchWithQueryAction(value);
+    this.setState({ items });
   };
 
   render() {
-    const { value } = this.state;
+    const { value, items } = this.state;
     const inputProps = {
       placeholder: 'Введите название товара',
       value,
@@ -80,7 +79,7 @@ class Search extends Component {
 
     return (
       <Autosuggest
-        suggestions={this.props.search}
+        suggestions={items}
         onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
         getSuggestionValue={getSuggestionValue}
         renderSuggestionsContainer={renderSuggestionsContainer}
@@ -93,15 +92,11 @@ class Search extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  search: state.search,
-});
-
 const mapDispatchToProps = dispatch => ({
-  getSearchWithQuery: query => dispatch(searchActions.getSearchWithQuery(query)),
+  getSearchWithQueryAction: query => dispatch(searchActions.getSearchWithQuery(query)),
 });
 
 Search.propTypes = propTypes;
 Search.defaultProps = defaultProps;
 
-export default connect(mapStateToProps, mapDispatchToProps)(Search);
+export default connect(null, mapDispatchToProps)(Search);

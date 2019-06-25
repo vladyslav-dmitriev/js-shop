@@ -12,7 +12,7 @@ const defaultProps = {};
 
 const PaginationItem = ({ isCurrentPage, handleChangePage, index }) => (
   <li
-    className={classnames('pagination__item', { ['pagination__item_active']: isCurrentPage })}
+    className={classnames('pagination__item', { 'pagination__item_active': isCurrentPage })}
     onClick={() => handleChangePage(index)}
     role="presentation"
   >

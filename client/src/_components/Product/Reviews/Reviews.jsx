@@ -9,7 +9,7 @@ import WithLoading from '../../WithLoading';
 const propTypes = {
   productLoading: PropTypes.bool,
   productId: PropTypes.number,
-  reviews: PropTypes.oneOfType([PropTypes.func, PropTypes.arrayOf]),
+  reviews: PropTypes.arrayOf.isRequired,
 };
 
 const defaultProps = {

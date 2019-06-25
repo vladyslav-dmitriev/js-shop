@@ -8,8 +8,7 @@ import RecommendationsItem from './RecommendationsItem';
 import ProductLoading from '../_shared/ProductLoading';
 
 const propTypes = {
-  getRecommendations: PropTypes.func.isRequired,
-  recommendations: PropTypes.oneOfType([PropTypes.arrayOf, PropTypes.shape({})]),
+  getRecommendationsAction: PropTypes.func.isRequired,
 };
 
 const defaultProps = {
@@ -39,18 +38,23 @@ const makeRecommendationsContent = recommendations => (
     )
     : (
       <div className="recommendations__container">
-        <ProductLoading count={4} key={+Date.now()} />
+        <ProductLoading count={6} key={+Date.now()} />
       </div>
     )
 );
 
 class Recommendations extends Component {
-  componentDidMount() {
-    this.props.getRecommendations();
+  state = {
+    recommendations: [],
+  };
+
+  async componentDidMount() {
+    const { data: recommendations } = await this.props.getRecommendationsAction();
+    this.setState({ recommendations });
   }
 
   render() {
-    const { recommendations } = this.props;
+    const { recommendations } = this.state;
 
     return (
       <div className="recommendations__container">
@@ -63,15 +67,11 @@ class Recommendations extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  recommendations: state.recommendations,
-});
-
 const mapDispatchToProps = dispatch => ({
-  getRecommendations: () => dispatch(recommendationsActions.getRecommendations()),
+  getRecommendationsAction: () => dispatch(recommendationsActions.getRecommendations()),
 });
 
 Recommendations.propTypes = propTypes;
 Recommendations.defaultProps = defaultProps;
 
-export default connect(mapStateToProps, mapDispatchToProps)(Recommendations);
+export default connect(null, mapDispatchToProps)(Recommendations);

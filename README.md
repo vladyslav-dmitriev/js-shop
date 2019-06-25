@@ -1,8 +1,24 @@
-# 💫 ReactJS + NodeJS Express on Heroku
-A **create-react-app** as a client and an **express** as a server, on **Heroku**, made simple
+# JS SHOP
+[https://es7.herokuapp.com](https://es7.herokuapp.com)
 
-## Instruction
-Create a new NodeJS app on Heroku, clone or fork this repository, connect the Heroku app to GitHub repository using the Deploy tab and have fun with [ReactJS] and [Express]!
 
-[ReactJS]: https://github.com/facebook/react/
-[Express]: https://github.com/expressjs/express/
+My pet-project - small online store created with React/Redux, Node/Express/MongoDB, ES7 and ESLint.
+
+## Functional
+- choose and filter products
+- create and view reviews
+- create order
+- admin notification of order (Telegram Bot API)
+
+## Commands
+
+#### Install & start dev server:
+- `git clone https://github.com/vladyslav-dmitriev/js-shop.git`
+- `npm install`
+- `npm start`
+
+#### Build production
+- `npm build`
+
+#### Deploy production on heroku
+- `git push heroku master`

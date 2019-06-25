@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Redirect } from 'react-router-dom';
-import { pathsConstants } from '../../_constants/index';
 
-import WithLoading from '../WithLoading/index';
-import Modal from './Modal/index';
+import WithLoading from '../WithLoading';
+import Modal from './Modal';
 import ProductInfoBlock from './ProductInfoBlock';
 
 const propTypes = {
@@ -26,49 +24,34 @@ const defaultProps = {};
 class ProductInfo extends Component {
   state = {
     isModalVisible: false,
-    isOrderCreate: false,
   };
 
   handleChangeModalVisibility = () => {
     this.setState(prevState => ({ isModalVisible: !prevState.isModalVisible }));
   };
 
-  handleOrderCreate = (isOrderCreate, order) => {
-    this.setState({ isOrderCreate, order });
-  };
-
   render() {
-    const { isModalVisible, isOrderCreate, order } = this.state;
+    const { isModalVisible } = this.state;
     const { product, productLoading } = this.props;
 
     return (
       <div className="product">
-
         {
           isModalVisible
             ? (
               <Modal
                 product={product}
-                isOrderCreate={isOrderCreate}
-                handleOrderCreate={this.handleOrderCreate}
                 handleChangeModalVisibility={this.handleChangeModalVisibility}
               />
             )
             : null
         }
-
-        {
-          isOrderCreate
-            ? <Redirect push to={{ pathname: pathsConstants.CART_PAGE, state: { order } }} />
-            : (
-              <WithLoading isLoading={productLoading}>
-                <ProductInfoBlock
-                  product={product}
-                  handleChangeModalVisibility={this.handleChangeModalVisibility}
-                />
-              </WithLoading>
-            )
-        }
+        <WithLoading isLoading={productLoading}>
+          <ProductInfoBlock
+            product={product}
+            handleChangeModalVisibility={this.handleChangeModalVisibility}
+          />
+        </WithLoading>
       </div>
     );
   }

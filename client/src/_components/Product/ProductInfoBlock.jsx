@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Gallery from './Gallery/index';
-import Button from '../_shared/Button/index';
+import Gallery from './Gallery';
+import Button from '../_shared/Button';
 
 const propTypes = {
   product: PropTypes.shape({

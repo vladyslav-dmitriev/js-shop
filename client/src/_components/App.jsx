@@ -1,13 +1,13 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import { pathsConstants } from '../../_constants';
+import { pathsConstants } from '../_constants';
 
-import Header from '../Header';
-import Footer from '../Footer';
-import Home from '../Home';
-import Product from '../Product';
-import Cart from '../Cart';
-import NotFound from '../NotFound';
+import Header from './Header';
+import Footer from './Footer';
+import Home from './Pages/Home';
+import Product from './Product';
+import Cart from './Pages/Cart';
+import NotFound from './Pages/NotFound';
 
 function App() {
   return (

@@ -4,7 +4,7 @@ export const getIdFromUrl = (path) => {
   const { length } = path;
   const url = window.location.pathname;
   const position = url.indexOf(path);
-  const id = url.slice(position + length + 1);
+  const id = +url.slice(position + length + 1);
   return id;
 };
 

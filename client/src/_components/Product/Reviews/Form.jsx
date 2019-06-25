@@ -2,70 +2,66 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getUserDataFromLocalStorage, saveUserDataToLocalStorage } from '../../../_helpers/utils';
-import { reviewsActions } from '../../../_actions/index';
+import { reviewsActions } from '../../../_actions';
 
-import InputText from '../../_shared/InputText/index';
-import Button from '../../_shared/Button/index';
+import InputText from '../../_shared/InputText';
+import Button from '../../_shared/Button';
 
 const propTypes = {
-  createReview: PropTypes.func.isRequired,
   productId: PropTypes.number.isRequired,
-  review: PropTypes.shape,
+  createReviewAction: PropTypes.func.isRequired,
+  addReviewToReviewsAction: PropTypes.func.isRequired,
 };
 
-const defaultProps = {
-  review: {},
-};
+const defaultProps = {};
 
 class Form extends Component {
   state = {
     ...getUserDataFromLocalStorage('name'),
     text: '',
-    isSend: false,
+    status: null,
+    isShowMessage: false,
   };
 
-  static getDerivedStateFromProps(nextProps, prevState) {
-    if (nextProps.review === 'success' && !prevState.isSend) {
-      const { addReviewToReviews } = nextProps;
-      const { name, text } = prevState;
+  handleChangeInput = (event, name) => this.setState({ [name]: event.target.value });
+
+  hideMessage = () => this.setState({ isShowMessage: false });
+
+  sendForm = async(event) => {
+    event.preventDefault();
+
+    const { productId, createReviewAction, addReviewToReviewsAction } = this.props;
+    const { name, text } = this.state;
+
+    saveUserDataToLocalStorage({ name });
+    const review = { product: productId, author: name, text };
+    const { data: status } = await createReviewAction(review);
+
+    if (status) {
       const reviewData = {
         createdAt: +Date.now(),
         author: name,
         text,
       };
 
-      addReviewToReviews(reviewData);
-      saveUserDataToLocalStorage({ name });
-
-      return {
-        isSend: true,
-        text: '',
-      };
+      addReviewToReviewsAction(reviewData);
+      this.setState({ status, text: '', isShowMessage: true });
+    } else {
+      this.setState({ status, isShowMessage: true });
     }
-    return null;
-  }
-
-  handleChangeInput = (event, name) => {
-    this.setState({ [name]: event.target.value });
-  };
-
-  sendForm = (event) => {
-    event.preventDefault();
-    const { productId } = this.props;
-    const { name, text } = this.state;
-
-    const review = { product: productId, author: name, text };
-    this.props.createReview(review);
-    this.setState({ isSend: false });
   };
 
   render() {
-    const { name, text } = this.state;
-    const { review } = this.props;
+    const { name, text, status, isShowMessage } = this.state;
+    const isStatusSuccess = status === 'success';
 
     return (
       <form onSubmit={this.sendForm}>
-        <div className="reviews__form-item reviews__form-item_name">
+        <div
+          className="reviews__form-item reviews__form-item_name"
+          onClick={this.hideMessage}
+          role="presentation"
+        >
           <InputText
             title="Имя"
             name="name"
@@ -74,7 +70,11 @@ class Form extends Component {
             handleChangeInput={this.handleChangeInput}
           />
         </div>
-        <div className="reviews__form-item reviews__form-item_text">
+        <div
+          className="reviews__form-item reviews__form-item_text"
+          onClick={this.hideMessage}
+          role="presentation"
+        >
           <InputText
             title="Сообщение"
             name="text"
@@ -85,7 +85,7 @@ class Form extends Component {
           />
         </div>
         {
-          review.status === 'success'
+          isStatusSuccess && isShowMessage
             ? <div className="reviews__success-message">Отзыв успешно добавлен</div>
             : null
         }
@@ -98,12 +98,12 @@ class Form extends Component {
 }
 
 const mapStateToProps = state => ({
-  review: state.review,
+  reviews: state.reviews,
 });
 
 const mapDispatchToProps = dispatch => ({
-  createReview: review => dispatch(reviewsActions.createReview(review)),
-  addReviewToReviews: review => dispatch(reviewsActions.addReviewToReviews(review)),
+  createReviewAction: review => dispatch(reviewsActions.createReview(review)),
+  addReviewToReviewsAction: review => dispatch(reviewsActions.addReviewToReviews(review)),
 });
 
 Form.propTypes = propTypes;

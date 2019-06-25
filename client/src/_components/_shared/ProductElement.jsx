@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import { pathsConstants } from '../../../_constants';
+import { pathsConstants } from '../../_constants';
 
 const propTypes = {
   product: PropTypes.shape({

@@ -9,10 +9,8 @@ const propTypes = {
     id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
     url: PropTypes.array.isRequired,
-    price: PropTypes.number.isRequired,
+    price: PropTypes.string.isRequired,
   }).isRequired,
-  isOrderCreate: PropTypes.bool.isRequired,
-  handleOrderCreate: PropTypes.func.isRequired,
 };
 
 const defaultProps = {};
@@ -25,8 +23,6 @@ const Modal = ({
     price,
   },
   handleChangeModalVisibility,
-  isOrderCreate,
-  handleOrderCreate,
 }) => (
   <div className="product-modal">
     <div
@@ -55,8 +51,6 @@ const Modal = ({
         </div>
         <div className="product-modal__right-box">
           <Form
-            isOrderCreate={isOrderCreate}
-            handleOrderCreate={handleOrderCreate}
             productId={id}
           />
         </div>

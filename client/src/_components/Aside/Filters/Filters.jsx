@@ -8,21 +8,21 @@ import FilterBlock from './FilterBlock';
 const propTypes = {
   params: PropTypes.shape({}).isRequired,
   filters: PropTypes.shape({}).isRequired,
-  getFilters: PropTypes.func.isRequired,
-  getAllProducts: PropTypes.func.isRequired,
-  saveFiltersParams: PropTypes.func.isRequired,
+  getFiltersAction: PropTypes.func.isRequired,
+  getAllProductsAction: PropTypes.func.isRequired,
+  saveFiltersParamsAction: PropTypes.func.isRequired,
 };
 
 class Filters extends Component {
   componentDidMount() {
-    this.props.getFilters();
+    this.props.getFiltersAction();
   }
 
   handleChangeFilter = (isChecked, value, type) => {
     const {
       params,
-      saveFiltersParams,
-      getAllProducts,
+      saveFiltersParamsAction,
+      getAllProductsAction,
     } = this.props;
     const filteredParams = { page: params.page, filters: {} };
 
@@ -42,8 +42,8 @@ class Filters extends Component {
     const paramsForSave = { ...filteredParams, page: 1 };
     const paramsForRequest = { ...filteredParams.filters, page: 1 };
 
-    saveFiltersParams(paramsForSave);
-    getAllProducts(paramsForRequest);
+    saveFiltersParamsAction(paramsForSave);
+    getAllProductsAction(paramsForRequest);
   };
 
   render() {
@@ -69,9 +69,9 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  getFilters: () => dispatch(filtersActions.getFilters()),
-  getAllProducts: params => dispatch(productsActions.getAllProducts(params)),
-  saveFiltersParams: params => dispatch(filtersActions.saveFiltersParams(params)),
+  getFiltersAction: () => dispatch(filtersActions.getFilters()),
+  getAllProductsAction: params => dispatch(productsActions.getAllProducts(params)),
+  saveFiltersParamsAction: params => dispatch(filtersActions.saveFiltersParams(params)),
 });
 
 Filters.propTypes = propTypes;
