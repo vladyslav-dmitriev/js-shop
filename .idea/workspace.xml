@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bdea90b4-e11c-4d73-8978-a0c6cb6be593" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/_components/Pages/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/_components/Pages/Home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/_components/Pages/Product.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/_components/Pages/Product.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/_components/ProductInfo/ProductInfo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/_components/ProductInfo/ProductInfo.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/_components/ProductInfo/Reviews/Form.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/_components/ProductInfo/Reviews/Form.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/_components/ProductInfo/Reviews/Reviews.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/_components/ProductInfo/Reviews/Reviews.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/_components/Recommendations.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/_components/Recommendations.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/_reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/_reducers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/_reducers/products.reducer.js" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,9 +34,9 @@
           <entry key="css" value="3" />
           <entry key="gitignore" value="3" />
           <entry key="html" value="3" />
-          <entry key="js" value="142" />
+          <entry key="js" value="145" />
           <entry key="json" value="13" />
-          <entry key="jsx" value="230" />
+          <entry key="jsx" value="238" />
           <entry key="md" value="6" />
           <entry key="scss" value="9" />
           <entry key="tsx" value="1" />
@@ -45,8 +47,8 @@
           <entry key="CSS" value="3" />
           <entry key="HTML" value="3" />
           <entry key="JSON" value="13" />
-          <entry key="JSX Harmony" value="230" />
-          <entry key="JavaScript" value="142" />
+          <entry key="JSX Harmony" value="238" />
+          <entry key="JavaScript" value="145" />
           <entry key="Markdown" value="6" />
           <entry key="PLAIN_TEXT" value="4" />
           <entry key="SCSS" value="9" />
@@ -58,9 +60,9 @@
           <entry key="css" value="1" />
           <entry key="gitignore" value="11" />
           <entry key="html" value="23" />
-          <entry key="js" value="220" />
+          <entry key="js" value="222" />
           <entry key="json" value="45" />
-          <entry key="jsx" value="2883" />
+          <entry key="jsx" value="3280" />
           <entry key="scss" value="42" />
         </counts>
       </usages-collector>
@@ -69,8 +71,8 @@
           <entry key="CSS" value="1" />
           <entry key="HTML" value="23" />
           <entry key="JSON" value="45" />
-          <entry key="JSX Harmony" value="2883" />
-          <entry key="JavaScript" value="220" />
+          <entry key="JSX Harmony" value="3280" />
+          <entry key="JavaScript" value="222" />
           <entry key="PLAIN_TEXT" value="11" />
           <entry key="SCSS" value="42" />
         </counts>
@@ -85,10 +87,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/_components/Pages/Home.jsx">
+        <entry file="file://$PROJECT_DIR$/client/src/_components/Pages/Product.jsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+              <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -96,11 +98,20 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/_reducers/reviews.reducer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/src/_reducers/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="238">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -112,16 +123,11 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>false</find>
-      <find>isOrderCreate</find>
-      <find>state.order</find>
       <find>handleOrderCreate</find>
       <find>review</find>
       <find>review:</find>
-      <find>addReviewToReviewsAction</find>
       <find>status</find>
       <find>$success</find>
-      <find>state.review</find>
       <find>props</find>
       <find>Props</find>
       <find>recommendations</find>
@@ -142,6 +148,11 @@
       <find>sliderSettings</find>
       <find>state.products</find>
       <find>products</find>
+      <find>createReviewAction</find>
+      <find>reviews</find>
+      <find>addReviewToReviewsAction</find>
+      <find>addReviewToReviews</find>
+      <find>state.review</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Vladyslav\Web Development\Projects\react-express-heroku\client</dir>
@@ -156,8 +167,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/client/src/index.js" />
-        <option value="$PROJECT_DIR$/client/src/assets/scss/main.scss" />
         <option value="$PROJECT_DIR$/client/src/_components/Product/Gallery/Gallery.jsx" />
         <option value="$PROJECT_DIR$/client/src/_components/Footer/Footer.jsx" />
         <option value="$PROJECT_DIR$/client/src/_actions/products.actions.js" />
@@ -194,18 +203,20 @@
         <option value="$PROJECT_DIR$/client/src/_components/Recommendations/Recommendations.jsx" />
         <option value="$PROJECT_DIR$/client/src/_constants/app.constants.js" />
         <option value="$PROJECT_DIR$/client/src/_constants/index.js" />
-        <option value="$PROJECT_DIR$/client/src/_components/Recommendations.jsx" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/client/src/_components/Pagination/Pagination.jsx" />
         <option value="$PROJECT_DIR$/client/src/_components/Pagination.jsx" />
         <option value="$PROJECT_DIR$/client/src/_components/Products/Products.jsx" />
         <option value="$PROJECT_DIR$/client/src/_components/Products.jsx" />
         <option value="$PROJECT_DIR$/client/src/_components/ProductInfo/index.js" />
-        <option value="$PROJECT_DIR$/client/src/_components/Pages/Product.jsx" />
-        <option value="$PROJECT_DIR$/client/src/_components/ProductInfo/ProductInfo.jsx" />
         <option value="$PROJECT_DIR$/client/src/_components/App.jsx" />
         <option value="$PROJECT_DIR$/client/src/_components/Filters/Filters.jsx" />
         <option value="$PROJECT_DIR$/client/src/_components/Pages/Home.jsx" />
+        <option value="$PROJECT_DIR$/client/src/_components/Recommendations.jsx" />
+        <option value="$PROJECT_DIR$/client/src/_components/ProductInfo/ProductInfo.jsx" />
+        <option value="$PROJECT_DIR$/client/src/_components/ProductInfo/Reviews/Form.jsx" />
+        <option value="$PROJECT_DIR$/client/src/_components/Pages/Product.jsx" />
+        <option value="$PROJECT_DIR$/client/src/_components/ProductInfo/Reviews/Reviews.jsx" />
         <option value="$PROJECT_DIR$/client/src/_reducers/index.js" />
       </list>
     </option>
@@ -325,12 +336,12 @@
       <workItem from="1561358542983" duration="6451000" />
       <workItem from="1561471409640" duration="20113000" />
       <workItem from="1561538786438" duration="138000" />
-      <workItem from="1561538963451" duration="3038000" />
+      <workItem from="1561538963451" duration="5259000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50078000" />
+    <option name="totallyTimeSpent" value="52299000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -366,16 +377,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client/src/_constants/paths.constants.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/_constants/products.constants.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/_constants/order.constants.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -529,13 +530,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/_components/Recommendations.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-178">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -573,34 +567,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/_components/ProductInfo/Reviews/ReviewsItem.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-306">
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/_components/ProductInfo/Reviews/Reviews.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/_components/ProductInfo/ProductInfoBlock.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1038">
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/_components/ProductInfo/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -612,16 +578,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/_components/ProductInfo/ProductInfo.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-561">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -666,16 +622,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/_components/Pages/Product.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-494">
-          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/_components/Products.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -686,23 +632,95 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/_reducers/products.reducer.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/_components/Pages/Home.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="68">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/_components/Recommendations.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="798">
+          <caret line="63" column="1" lean-forward="true" selection-start-line="63" selection-start-column="1" selection-end-line="63" selection-end-column="1" />
+          <folding>
+            <element signature="e#188#241#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/_components/ProductInfo/Reviews/ReviewsItem.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/_components/ProductInfo/ProductInfoBlock.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-171">
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/_components/ProductInfo/ProductInfo.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/_reducers/products.reducer.js">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/client/src/_components/ProductInfo/Reviews/Reviews.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="27" column="11" lean-forward="true" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/_components/ProductInfo/Reviews/Form.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="92" lean-forward="true" selection-start-line="92" selection-end-line="92" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/_components/Pages/Product.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/_reducers/reviews.reducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/_reducers/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="238">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>

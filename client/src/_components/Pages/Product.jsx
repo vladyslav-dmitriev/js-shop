@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
-import { productsActions, recommendationsActions } from '../../_actions';
+import {productsActions, recommendationsActions, reviewsActions} from '../../_actions';
 import { getIdFromUrl } from '../../_helpers/utils';
 import { pathsConstants } from '../../_constants';
 
@@ -22,6 +22,7 @@ const defaultProps = {
 class Product extends Component {
   state = {
     product: {},
+    reviews: [],
   };
 
   componentDidMount() {
@@ -49,13 +50,20 @@ class Product extends Component {
 
   async loadProductData(id) {
     const { data: product } = await this.props.getProductByIdAction(id);
-    this.setState({ product });
+    this.setState({ product, reviews: product.reviews });
   }
 
+  addReviewToReviews = (review) => {
+    this.setState(prevState => ({ reviews: [...prevState.reviews, review] }));
+  };
+
   render() {
-    const { product } = this.state;
+    const { product, reviews } = this.state;
     const { error } = product;
-    const { productLoading } = this.props;
+    const {
+      productLoading,
+      createReviewAction,
+    } = this.props;
 
     if (error) {
       return (
@@ -67,7 +75,13 @@ class Product extends Component {
       <main className="main">
         <div className="container">
           <ProductInfo product={product} productLoading={productLoading} />
-          <Reviews productId={product.id} productLoading={productLoading} />
+          <Reviews
+            reviews={reviews}
+            productId={product.id}
+            productLoading={productLoading}
+            createReviewAction={createReviewAction}
+            addReviewToReviews={this.addReviewToReviews}
+          />
           <Recommendations />
         </div>
       </main>
@@ -82,6 +96,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   getProductByIdAction: id => dispatch(productsActions.getProductById(id)),
   getRecommendationsAction: () => dispatch(recommendationsActions.getRecommendations()),
+  createReviewAction: review => dispatch(reviewsActions.createReview(review)),
 });
 
 Product.propTypes = propTypes;

@@ -6,7 +6,7 @@ import { recommendationsActions } from '../_actions';
 import { appConstants } from '../_constants';
 
 import ProductLoading from './_shared/ProductLoading';
-import ProductElement from "./_shared/ProductElement";
+import ProductElement from './_shared/ProductElement';
 
 const propTypes = {
   getRecommendationsAction: PropTypes.func.isRequired,

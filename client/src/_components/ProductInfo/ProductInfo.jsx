@@ -41,10 +41,7 @@ class ProductInfo extends Component {
           />
         )}
         <WithLoading isLoading={productLoading}>
-          <ProductInfoBlock
-            product={product}
-            handleChangeModalVisibility={this.handleChangeModalVisibility}
-          />
+          <ProductInfoBlock product={product} handleChangeModalVisibility={this.handleChangeModalVisibility} />
         </WithLoading>
       </div>
     );
