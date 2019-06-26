@@ -1,31 +1,29 @@
 import React from 'react';
 
-const Footer = () => (
-  <footer className="footer">
-    <div className="container">
-      <div className="footer__copyright">
-        {'© '}
-        {new Date().getFullYear()}
-        <a
-          className="footer__author"
-          href="//linkedin.com/in/vladyslav-dmitriev"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {'Vladyslav Dmitriev'}
-        </a>
-        {' |'}
-        <a
-          className="footer__author"
-          href="//github.com/vladyslav-dmitriev/js-shop"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {'Github'}
-        </a>
+const Footer = () => {
+  const links = [
+    { href: '//linkedin.com/in/vladyslav-dmitriev', text: 'Vladyslav Dmitriev' },
+    { href: '//github.com/vladyslav-dmitriev/js-shop', text: 'Github' },
+  ];
+  const renderLink = ({ href, text }) => (<a
+    className="footer__author"
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    {text}
+  </a>);
+
+  return (
+    <footer className="footer">
+      <div className="container">
+        <div className="footer__copyright">
+          {`© ${new Date().getFullYear()}`}
+          {links.map(link => renderLink(link))}
+        </div>
       </div>
-    </div>
-  </footer>
-);
+    </footer>
+  )
+};
 
 export default Footer;

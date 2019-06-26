@@ -10,8 +10,19 @@
   }
   &__author {
     display: inline-block;
-    margin-left: 4px;
+    margin-right: 8px;
     color: $accent;
+    position: relative;
+    padding-left: 12px;
     @include weight--medium;
+    &::after {
+      content: ' |';
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    &:first-child::after {
+      display: none;
+    }
   }
 }
