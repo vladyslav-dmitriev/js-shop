@@ -3,19 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="bdea90b4-e11c-4d73-8978-a0c6cb6be593" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/_components/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/_components/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/_components/Pages/Product.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/_components/Pages/Product.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/_components/Product/Gallery.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/_components/ProductInfo/Gallery.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/_components/Product/Modal/Form.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/_components/ProductInfo/Modal/Form.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/_components/Product/Modal/Modal.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/_components/ProductInfo/Modal/Modal.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/_components/Product/Modal/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/_components/ProductInfo/Modal/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/_components/Product/ProductInfo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/_components/ProductInfo/ProductInfo.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/_components/Product/ProductInfoBlock.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/_components/ProductInfo/ProductInfoBlock.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/_components/Product/Reviews/Form.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/_components/ProductInfo/Reviews/Form.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/_components/Product/Reviews/Reviews.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/_components/ProductInfo/Reviews/Reviews.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/_components/Product/Reviews/ReviewsItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/_components/ProductInfo/Reviews/ReviewsItem.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/_components/Product/Reviews/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/_components/ProductInfo/Reviews/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/_components/Product/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/_components/ProductInfo/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/_components/Aside/Aside.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/_components/Aside/Filters/FilterBlock.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/_components/Filters/FilterBlock.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/_components/Aside/Filters/FilterCheckbox.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/_components/Filters/FilterCheckbox.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/_components/Aside/Filters/Filters.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/_components/Filters/Filters.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/_components/Aside/Filters/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/_components/Filters/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/_components/Aside/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/_components/Pages/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/_components/Pages/Home.jsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,9 +36,9 @@
           <entry key="css" value="3" />
           <entry key="gitignore" value="3" />
           <entry key="html" value="3" />
-          <entry key="js" value="138" />
+          <entry key="js" value="139" />
           <entry key="json" value="13" />
-          <entry key="jsx" value="218" />
+          <entry key="jsx" value="223" />
           <entry key="md" value="6" />
           <entry key="scss" value="9" />
           <entry key="tsx" value="1" />
@@ -55,8 +49,8 @@
           <entry key="CSS" value="3" />
           <entry key="HTML" value="3" />
           <entry key="JSON" value="13" />
-          <entry key="JSX Harmony" value="218" />
-          <entry key="JavaScript" value="138" />
+          <entry key="JSX Harmony" value="223" />
+          <entry key="JavaScript" value="139" />
           <entry key="Markdown" value="6" />
           <entry key="PLAIN_TEXT" value="4" />
           <entry key="SCSS" value="9" />
@@ -70,7 +64,7 @@
           <entry key="html" value="23" />
           <entry key="js" value="218" />
           <entry key="json" value="45" />
-          <entry key="jsx" value="2757" />
+          <entry key="jsx" value="2765" />
           <entry key="scss" value="42" />
         </counts>
       </usages-collector>
@@ -79,7 +73,7 @@
           <entry key="CSS" value="1" />
           <entry key="HTML" value="23" />
           <entry key="JSON" value="45" />
-          <entry key="JSX Harmony" value="2757" />
+          <entry key="JSX Harmony" value="2765" />
           <entry key="JavaScript" value="218" />
           <entry key="PLAIN_TEXT" value="11" />
           <entry key="SCSS" value="42" />
@@ -95,10 +89,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/_components/Pages/Product.jsx">
+        <entry file="file://$PROJECT_DIR$/client/src/_components/Pages/Home.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1479">
-              <caret line="90" lean-forward="true" selection-start-line="90" selection-end-line="90" />
+            <state relative-caret-position="510">
+              <caret line="48" column="39" lean-forward="true" selection-start-line="48" selection-start-column="39" selection-end-line="48" selection-end-column="39" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -107,13 +101,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/client/src/_components/ProductInfo/ProductInfo.jsx">
+        <entry file="file://$PROJECT_DIR$/client/src/_components/Filters/Filters.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="51">
+              <caret line="3" column="55" selection-start-line="3" selection-start-column="55" selection-end-line="3" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -166,7 +157,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/client/node_modules/react-scripts/config/webpack.config.prod.js" />
         <option value="$PROJECT_DIR$/client/src/index.js" />
         <option value="$PROJECT_DIR$/client/src/assets/scss/main.scss" />
         <option value="$PROJECT_DIR$/client/src/_components/Product/Gallery/Gallery.jsx" />
@@ -209,7 +199,6 @@
         <option value="$PROJECT_DIR$/client/src/_components/Recommendations.jsx" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/client/src/_components/Pagination/Pagination.jsx" />
-        <option value="$PROJECT_DIR$/client/src/_components/Pages/Home.jsx" />
         <option value="$PROJECT_DIR$/client/src/_components/Pagination.jsx" />
         <option value="$PROJECT_DIR$/client/src/_components/Products/Products.jsx" />
         <option value="$PROJECT_DIR$/client/src/_components/Products.jsx" />
@@ -217,6 +206,8 @@
         <option value="$PROJECT_DIR$/client/src/_components/Pages/Product.jsx" />
         <option value="$PROJECT_DIR$/client/src/_components/ProductInfo/ProductInfo.jsx" />
         <option value="$PROJECT_DIR$/client/src/_components/App.jsx" />
+        <option value="$PROJECT_DIR$/client/src/_components/Pages/Home.jsx" />
+        <option value="$PROJECT_DIR$/client/src/_components/Filters/Filters.jsx" />
       </list>
     </option>
   </component>
@@ -343,12 +334,12 @@
       <workItem from="1561358542983" duration="6451000" />
       <workItem from="1561471409640" duration="20113000" />
       <workItem from="1561538786438" duration="138000" />
-      <workItem from="1561538963451" duration="2127000" />
+      <workItem from="1561538963451" duration="2327000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49167000" />
+    <option name="totallyTimeSpent" value="49367000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -384,37 +375,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client/src/_components/Pages/Cart.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/_components/Aside/Filters/Filters.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/_helpers/store.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/_helpers/utils.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/_components/ProductInfo/Modal/Form.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/_components/Header/Header.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -653,16 +613,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/_components/Pages/Home.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/_components/ProductInfo/Reviews/ReviewsItem.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-306">
@@ -705,23 +655,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/_components/Pages/Product.jsx">
+    <entry file="file://$PROJECT_DIR$/client/src/_components/ProductInfo/ProductInfo.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1479">
-          <caret line="90" lean-forward="true" selection-start-line="90" selection-end-line="90" />
+        <state relative-caret-position="-561">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/_components/ProductInfo/ProductInfo.jsx">
+    <entry file="file://$PROJECT_DIR$/client/src/_components/Pages/Product.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="476">
+          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/_components/Aside/Aside.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/_components/Filters/index.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/_components/Pages/Home.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="48" column="39" lean-forward="true" selection-start-line="48" selection-start-column="39" selection-end-line="48" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/_components/Filters/FilterCheckbox.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/_components/Filters/FilterBlock.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/_components/Filters/Filters.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="55" selection-start-line="3" selection-start-column="55" selection-end-line="3" selection-end-column="55" />
         </state>
       </provider>
     </entry>

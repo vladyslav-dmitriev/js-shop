@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 import { filtersActions, productsActions } from '../../_actions';
 
 import WithLoading from '../WithLoading';
-import Aside from '../Aside';
 import Products from '../Products';
 import Pagination from '../Pagination';
+import Filters from '../Filters';
 
 const propTypes = {
   productsLoading: PropTypes.bool,
@@ -45,7 +45,9 @@ class Home extends Component {
         <div className="container">
           <div className="home__container">
             <div className="home__wrapper">
-              <Aside />
+              <div className="aside">
+                <Filters filter={{}} />
+              </div>
               <div className="home__box">
                 <div className="home__title">Компьютеры и электроника</div>
                 <WithLoading isLoading={productsLoading}>
