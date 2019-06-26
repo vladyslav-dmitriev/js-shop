@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
-import {productsActions, recommendationsActions} from '../../_actions';
+import { productsActions, recommendationsActions } from '../../_actions';
 import { getIdFromUrl } from '../../_helpers/utils';
 import { pathsConstants } from '../../_constants';
 
-import ProductInfo from '../Product/ProductInfo';
-import Reviews from '../Product/Reviews';
+import ProductInfo from '../ProductInfo';
+import Reviews from '../ProductInfo/Reviews';
 import Recommendations from '../Recommendations';
 
 const propTypes = {

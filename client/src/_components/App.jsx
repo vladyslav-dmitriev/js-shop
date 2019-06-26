@@ -5,7 +5,7 @@ import { pathsConstants } from '../_constants';
 import Header from './Header';
 import Footer from './Footer';
 import Home from './Pages/Home';
-import Product from './Product';
+import Product from './Pages/Product';
 import Cart from './Pages/Cart';
 import NotFound from './Pages/NotFound';
 
