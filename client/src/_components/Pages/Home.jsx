@@ -31,7 +31,14 @@ class Home extends Component {
   }
 
   render() {
-    const { products, productsLoading } = this.props;
+    const {
+      products,
+      productsLoading,
+      pagination,
+      params,
+      getAllProductsAction,
+      saveFiltersParamsAction,
+    } = this.props;
 
     return (
       <main className="main">
@@ -43,7 +50,12 @@ class Home extends Component {
                 <div className="home__title">Компьютеры и электроника</div>
                 <WithLoading isLoading={productsLoading}>
                   <Products products={products} productsLoading={productsLoading} />
-                  <Pagination />
+                  <Pagination
+                    pagination={pagination}
+                    params={params}
+                    getAllProductsAction={getAllProductsAction}
+                    saveFiltersParamsAction={saveFiltersParamsAction}
+                  />
                 </WithLoading>
               </div>
             </div>
@@ -57,6 +69,8 @@ class Home extends Component {
 const mapStateToProps = state => ({
   products: state.products,
   productsLoading: state.api.loading.PRODUCTS,
+  pagination: state.pagination,
+  params: state.params,
 });
 
 const mapDispatchToProps = dispatch => ({
