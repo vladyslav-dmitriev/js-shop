@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { filtersActions, productsActions } from '../../_actions';
 
 import FilterBlock from './FilterBlock';
 
@@ -13,11 +11,9 @@ const propTypes = {
   saveFiltersParamsAction: PropTypes.func.isRequired,
 };
 
-class Filters extends Component {
-  componentDidMount() {
-    this.props.getFiltersAction();
-  }
+const defaultProps = {};
 
+class Filters extends Component {
   handleChangeFilter = (isChecked, value, type) => {
     const {
       params,
@@ -63,17 +59,7 @@ class Filters extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  filters: state.filters,
-  params: state.params,
-});
-
-const mapDispatchToProps = dispatch => ({
-  getFiltersAction: () => dispatch(filtersActions.getFilters()),
-  getAllProductsAction: params => dispatch(productsActions.getAllProducts(params)),
-  saveFiltersParamsAction: params => dispatch(filtersActions.saveFiltersParams(params)),
-});
-
 Filters.propTypes = propTypes;
+Filters.defaultProps = defaultProps;
 
-export default connect(mapStateToProps, mapDispatchToProps)(Filters);
+export default Filters;

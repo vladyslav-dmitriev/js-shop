@@ -20,12 +20,13 @@ const defaultProps = {
 
 class Home extends Component {
   state = {
-    products: [],
+    filters: [],
   };
 
   async componentDidMount() {
     const { data: products } = await this.props.getAllProductsAction({ page: 1 });
-    this.setState({ products });
+    const { data: filters } = await this.props.getFiltersAction();
+    this.setState({ filters, products });
     this.props.saveFiltersParamsAction({ page: 1 });
   }
 
@@ -38,7 +39,7 @@ class Home extends Component {
       saveFiltersParamsAction,
     } = this.props;
 
-    const { products } = this.state;
+    const { filters, products } = this.state;
 
     return (
       <main className="main">
@@ -46,18 +47,30 @@ class Home extends Component {
           <div className="home__container">
             <div className="home__wrapper">
               <div className="aside">
-                <Filters filter={{}} />
+                <Filters
+                  filters={filters}
+                  params={params}
+                  saveFiltersParamsAction={saveFiltersParamsAction}
+                  getAllProductsAction={getAllProductsAction}
+                />
               </div>
               <div className="home__box">
                 <div className="home__title">Компьютеры и электроника</div>
                 <WithLoading isLoading={productsLoading}>
-                  <Products products={products} productsLoading={productsLoading} />
-                  <Pagination
-                    pagination={pagination}
-                    params={params}
-                    getAllProductsAction={getAllProductsAction}
-                    saveFiltersParamsAction={saveFiltersParamsAction}
-                  />
+                  {
+                    products
+                    ? (
+                      <div>
+                        <Products products={products} productsLoading={productsLoading} />
+                        <Pagination
+                          pagination={pagination}
+                          params={params}
+                          getAllProductsAction={getAllProductsAction}
+                          saveFiltersParamsAction={saveFiltersParamsAction}
+                        />
+                      </div>
+                    ) : null
+                  }
                 </WithLoading>
               </div>
             </div>
@@ -75,6 +88,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
+  getFiltersAction: () => dispatch(filtersActions.getFilters()),
   getAllProductsAction: params => dispatch(productsActions.getAllProducts(params)),
   saveFiltersParamsAction: params => dispatch(filtersActions.saveFiltersParams(params)),
 });
