@@ -3,22 +3,23 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
 const propTypes = {
-  params: PropTypes.shape({}).isRequired,
-  pagination: PropTypes.oneOfType([PropTypes.number, PropTypes.shape({})]).isRequired,
-  getAllProductsAction: PropTypes.func.isRequired,
+  filters: PropTypes.shape({}).isRequired,
+  pages: PropTypes.number.isRequired,
+  getAllProducts: PropTypes.func.isRequired,
   saveFiltersParamsAction: PropTypes.func.isRequired,
 };
 
 const defaultProps = {};
 
 class Pagination extends Component {
-  renderPagination = (page, pagination, handleChangePage) => {
+  renderPagination = (page, pages, handleChangePage) => {
     const paginationItems = [];
-    for (let i = 1; i <= pagination; i++) {
+    for (let i = 1; i <= pages; i++) {
       paginationItems.push(
         <li
           className={classnames('pagination__item', { 'pagination__item_active': page === i })}
           onClick={() => handleChangePage(i)}
+          key={i}
           role="presentation"
         >
           {i}
@@ -30,23 +31,23 @@ class Pagination extends Component {
 
   handleChangePage = (page) => {
     const {
-      params,
-      getAllProductsAction,
+      filters,
+      getAllProducts,
       saveFiltersParamsAction,
     } = this.props;
 
-    const paramsForSave = { ...params.filters, page };
-    const paramsForRequest = { ...params.filters, page };
+    const paramsForSave = { ...filters.filters, page };
+    const paramsForRequest = { ...filters.filters, page };
 
     saveFiltersParamsAction(paramsForSave);
-    getAllProductsAction(paramsForRequest);
+    getAllProducts(paramsForRequest);
   };
 
   render() {
-    const { params: { page }, pagination } = this.props;
+    const { filters: { page }, pages } = this.props;
     return (
       <ul className="pagination">
-        {this.renderPagination(page, pagination, this.handleChangePage)}
+        {this.renderPagination(page, pages, this.handleChangePage)}
       </ul>
     );
   }

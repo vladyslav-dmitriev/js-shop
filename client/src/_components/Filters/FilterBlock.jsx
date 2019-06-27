@@ -5,21 +5,21 @@ import FilterCheckbox from './FilterCheckbox';
 
 const propTypes = {
   filter: PropTypes.shape({
-    filters: PropTypes.array,
+    params: PropTypes.array,
   }),
   handleChangeFilter: PropTypes.func.isRequired,
 };
 
 const defaultProps = {
   filter: {
-    filters: [],
+    params: [],
   },
 };
 
 const FilterBlock = ({ filter, handleChangeFilter }) => (
   <div className="filters__item">
     <div className="filters__title">{filter.title}</div>
-    {filter && filter.filters.map(item => (
+    {filter && filter.params.map(item => (
       <FilterCheckbox
         handleChangeFilter={handleChangeFilter}
         type={filter.type}

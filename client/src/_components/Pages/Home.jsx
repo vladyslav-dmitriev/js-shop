@@ -20,26 +20,37 @@ const defaultProps = {
 
 class Home extends Component {
   state = {
-    filters: [],
+    filtersList: [],
   };
 
   async componentDidMount() {
-    const { data: products } = await this.props.getAllProductsAction({ page: 1 });
-    const { data: filters } = await this.props.getFiltersAction();
-    this.setState({ filters, products });
+    const { data: products, pages } = await this.props.getAllProductsAction({ page: 1 });
+    const { data: filtersList } = await this.props.getFiltersAction();
     this.props.saveFiltersParamsAction({ page: 1 });
+    this.setState({
+      filtersList,
+      products,
+      pages,
+    });
   }
+
+  getAllProducts = async (paramsForRequest) => {
+    const { data: products, pages } = await this.props.getAllProductsAction(paramsForRequest);
+    this.setState({ products, pages });
+  };
 
   render() {
     const {
       productsLoading,
-      pagination,
-      params,
-      getAllProductsAction,
       saveFiltersParamsAction,
+      filters,
     } = this.props;
 
-    const { filters, products } = this.state;
+    const {
+      filtersList,
+      products,
+      pages,
+    } = this.state;
 
     return (
       <main className="main">
@@ -49,9 +60,9 @@ class Home extends Component {
               <div className="aside">
                 <Filters
                   filters={filters}
-                  params={params}
+                  filtersList={filtersList}
                   saveFiltersParamsAction={saveFiltersParamsAction}
-                  getAllProductsAction={getAllProductsAction}
+                  getAllProducts={this.getAllProducts}
                 />
               </div>
               <div className="home__box">
@@ -63,9 +74,9 @@ class Home extends Component {
                       <div>
                         <Products products={products} productsLoading={productsLoading} />
                         <Pagination
-                          pagination={pagination}
-                          params={params}
-                          getAllProductsAction={getAllProductsAction}
+                          pages={pages}
+                          filters={filters}
+                          getAllProducts={this.getAllProducts}
                           saveFiltersParamsAction={saveFiltersParamsAction}
                         />
                       </div>
@@ -83,8 +94,7 @@ class Home extends Component {
 
 const mapStateToProps = state => ({
   productsLoading: state.api.loading.PRODUCTS,
-  pagination: state.pagination,
-  params: state.params,
+  filters: state.filters,
 });
 
 const mapDispatchToProps = dispatch => ({

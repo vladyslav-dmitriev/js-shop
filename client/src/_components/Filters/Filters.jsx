@@ -4,10 +4,8 @@ import PropTypes from 'prop-types';
 import FilterBlock from './FilterBlock';
 
 const propTypes = {
-  params: PropTypes.shape({}),
   filters: PropTypes.shape({}).isRequired,
-  getFiltersAction: PropTypes.func.isRequired,
-  getAllProductsAction: PropTypes.func.isRequired,
+  getAllProducts: PropTypes.func.isRequired,
   saveFiltersParamsAction: PropTypes.func.isRequired,
 };
 
@@ -16,38 +14,38 @@ const defaultProps = {};
 class Filters extends Component {
   handleChangeFilter = (isChecked, value, type) => {
     const {
-      params,
+      filters,
       saveFiltersParamsAction,
-      getAllProductsAction,
+      getAllProducts,
     } = this.props;
-    const filteredParams = { page: params.page, filters: {} };
+    const filteredParams = { page: filters.page, params: {} };
 
-    params.filters = {}.hasOwnProperty.call(params, 'filters') ? params.filters : {};
-    const { filters } = params;
+    filters.params = {}.hasOwnProperty.call(filters, 'params') ? filters.params : {};
+    const { params } = filters;
 
-    if (!{}.hasOwnProperty.call(filters, type)) {
-      filters[type] = [];
+    if (!{}.hasOwnProperty.call(params, type)) {
+      params[type] = [];
     }
 
-    for (const key in filters) {
-      filteredParams.filters[key] = key === type && isChecked
-        ? [...filters[key], value]
-        : filters[key].filter(param => !(param === value));
+    for (const key in params) {
+      filteredParams.params[key] = key === type && isChecked
+        ? [...params[key], value]
+        : params[key].filter(param => !(param === value));
     }
 
     const paramsForSave = { ...filteredParams, page: 1 };
-    const paramsForRequest = { ...filteredParams.filters, page: 1 };
+    const paramsForRequest = { ...filteredParams.params, page: 1 };
 
     saveFiltersParamsAction(paramsForSave);
-    getAllProductsAction(paramsForRequest);
+    getAllProducts(paramsForRequest);
   };
 
   render() {
-    const { filters } = this.props;
+    const { filtersList } = this.props;
     return (
       <div className="filters">
         <div className="filters__main-title">Фильтры</div>
-        {Object.values(filters).map(filter => (
+        {Object.values(filtersList).map(filter => (
           <FilterBlock
             handleChangeFilter={this.handleChangeFilter}
             filter={filter}
