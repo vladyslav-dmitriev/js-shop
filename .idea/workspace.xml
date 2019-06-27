@@ -3,9 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="bdea90b4-e11c-4d73-8978-a0c6cb6be593" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/_components/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/_components/Footer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/_components/Pages/Product.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/_components/Pages/Product.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/_components/ProductInfo/Reviews/Reviews.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/_components/ProductInfo/Reviews/Reviews.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/_components/Recommendations.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/_components/Recommendations.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/_components/WithLoading.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/_components/WithLoading.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/assets/scss/_components/_recommendations.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/assets/scss/_components/_recommendations.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/assets/scss/_components/_slider.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/assets/scss/_components/_slider.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,11 +36,11 @@
           <entry key="css" value="3" />
           <entry key="gitignore" value="3" />
           <entry key="html" value="3" />
-          <entry key="js" value="175" />
+          <entry key="js" value="177" />
           <entry key="json" value="13" />
-          <entry key="jsx" value="272" />
+          <entry key="jsx" value="279" />
           <entry key="md" value="6" />
-          <entry key="scss" value="10" />
+          <entry key="scss" value="13" />
           <entry key="tsx" value="1" />
         </counts>
       </usages-collector>
@@ -47,11 +49,11 @@
           <entry key="CSS" value="3" />
           <entry key="HTML" value="3" />
           <entry key="JSON" value="13" />
-          <entry key="JSX Harmony" value="272" />
-          <entry key="JavaScript" value="175" />
+          <entry key="JSX Harmony" value="279" />
+          <entry key="JavaScript" value="177" />
           <entry key="Markdown" value="6" />
           <entry key="PLAIN_TEXT" value="4" />
-          <entry key="SCSS" value="10" />
+          <entry key="SCSS" value="13" />
           <entry key="TypeScript JSX" value="1" />
         </counts>
       </usages-collector>
@@ -60,10 +62,10 @@
           <entry key="css" value="1" />
           <entry key="gitignore" value="11" />
           <entry key="html" value="23" />
-          <entry key="js" value="253" />
+          <entry key="js" value="256" />
           <entry key="json" value="45" />
-          <entry key="jsx" value="4667" />
-          <entry key="scss" value="149" />
+          <entry key="jsx" value="5081" />
+          <entry key="scss" value="193" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -71,10 +73,10 @@
           <entry key="CSS" value="1" />
           <entry key="HTML" value="23" />
           <entry key="JSON" value="45" />
-          <entry key="JSX Harmony" value="4667" />
-          <entry key="JavaScript" value="253" />
+          <entry key="JSX Harmony" value="5081" />
+          <entry key="JavaScript" value="256" />
           <entry key="PLAIN_TEXT" value="11" />
-          <entry key="SCSS" value="149" />
+          <entry key="SCSS" value="193" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
@@ -89,11 +91,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/src/_components/Recommendations.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="31" column="69" selection-start-line="31" selection-start-column="69" selection-end-line="31" selection-end-column="69" />
-              <folding>
-                <element signature="e#188#241#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="799">
+              <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
             </state>
           </provider>
         </entry>
@@ -102,12 +101,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>getDe</find>
-      <find>getRecommendationsAction</find>
-      <find>sliderSettings</find>
-      <find>state.products</find>
-      <find>products</find>
-      <find>createReviewAction</find>
       <find>reviews</find>
       <find>addReviewToReviewsAction</find>
       <find>addReviewToReviews</find>
@@ -132,6 +125,12 @@
       <find>pages</find>
       <find>getAllProductsAction</find>
       <find>getAllProducts</find>
+      <find>renderRecommendations</find>
+      <find>getRecommendationsAction</find>
+      <find>conso</find>
+      <find>recommendations</find>
+      <find>slick-slide</find>
+      <find>recommendations__container</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Vladyslav\Web Development\Projects\react-express-heroku\client</dir>
@@ -146,7 +145,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/client/src/_components/Pagination/PaginationItem.jsx" />
         <option value="$PROJECT_DIR$/client/public/index.html" />
         <option value="$PROJECT_DIR$/client/src/_components/_shared/Logo.jsx" />
         <option value="$PROJECT_DIR$/client/src/_components/Pages/Cart.jsx" />
@@ -158,7 +156,6 @@
         <option value="$PROJECT_DIR$/client/src/_components/Aside/Filters/FilterCheckbox.jsx" />
         <option value="$PROJECT_DIR$/client/src/_constants/paths.constants.js" />
         <option value="$PROJECT_DIR$/client/src/_components/_shared/ProductElement.jsx" />
-        <option value="$PROJECT_DIR$/client/src/assets/scss/_components/_slider.scss" />
         <option value="$PROJECT_DIR$/client/src/_helpers/axios.js" />
         <option value="$PROJECT_DIR$/client/src/_constants/products.constants.js" />
         <option value="$PROJECT_DIR$/client/src/_constants/order.constants.js" />
@@ -174,7 +171,6 @@
         <option value="$PROJECT_DIR$/client/src/_components/Product/Modal/Form.jsx" />
         <option value="$PROJECT_DIR$/client/src/_constants/search.constants.js" />
         <option value="$PROJECT_DIR$/client/src/_components/Recommendations/Recommendations.jsx" />
-        <option value="$PROJECT_DIR$/client/src/_constants/app.constants.js" />
         <option value="$PROJECT_DIR$/client/src/_constants/index.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/client/src/_components/Pagination/Pagination.jsx" />
@@ -183,8 +179,6 @@
         <option value="$PROJECT_DIR$/client/src/_components/App.jsx" />
         <option value="$PROJECT_DIR$/client/src/_components/ProductInfo/ProductInfo.jsx" />
         <option value="$PROJECT_DIR$/client/src/_components/ProductInfo/Reviews/Form.jsx" />
-        <option value="$PROJECT_DIR$/client/src/_components/Pages/Product.jsx" />
-        <option value="$PROJECT_DIR$/client/src/_components/ProductInfo/Reviews/Reviews.jsx" />
         <option value="$PROJECT_DIR$/client/src/assets/scss/_components/_footer.scss" />
         <option value="$PROJECT_DIR$/client/src/_reducers/index.js" />
         <option value="$PROJECT_DIR$/server/controllers/FilterController.js" />
@@ -194,8 +188,13 @@
         <option value="$PROJECT_DIR$/client/src/_components/Filters/Filters.jsx" />
         <option value="$PROJECT_DIR$/client/src/_components/Pagination.jsx" />
         <option value="$PROJECT_DIR$/client/src/_components/Products.jsx" />
-        <option value="$PROJECT_DIR$/client/src/_components/WithLoading.jsx" />
         <option value="$PROJECT_DIR$/client/src/_components/Footer.jsx" />
+        <option value="$PROJECT_DIR$/client/src/_components/ProductInfo/Reviews/Reviews.jsx" />
+        <option value="$PROJECT_DIR$/client/src/_components/Pages/Product.jsx" />
+        <option value="$PROJECT_DIR$/client/src/_constants/app.constants.js" />
+        <option value="$PROJECT_DIR$/client/src/assets/scss/_components/_recommendations.scss" />
+        <option value="$PROJECT_DIR$/client/src/assets/scss/_components/_slider.scss" />
+        <option value="$PROJECT_DIR$/client/src/_components/WithLoading.jsx" />
         <option value="$PROJECT_DIR$/client/src/_components/Recommendations.jsx" />
       </list>
     </option>
@@ -256,6 +255,21 @@
               <item name="client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="_components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="react-express-heroku" type="b2602c69:ProjectViewProjectNode" />
+              <item name="react-express-heroku" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="react-express-heroku" type="b2602c69:ProjectViewProjectNode" />
+              <item name="react-express-heroku" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="scss" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="react-express-heroku" type="b2602c69:ProjectViewProjectNode" />
@@ -328,12 +342,12 @@
       <workItem from="1561538786438" duration="138000" />
       <workItem from="1561538963451" duration="9973000" />
       <workItem from="1561637639358" duration="1777000" />
-      <workItem from="1561639589800" duration="2666000" />
+      <workItem from="1561639589800" duration="5485000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61456000" />
+    <option name="totallyTimeSpent" value="64275000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -369,19 +383,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/server/constants/messeger.constants.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/controllers/OrderController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-375">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/constants/pagination.constants.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/_actions/reviews.actions.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -403,13 +404,6 @@
     <entry file="file://$PROJECT_DIR$/client/src/_components/_shared/ProductLoading.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-204" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/_constants/app.constants.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="44" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="44" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
@@ -581,27 +575,6 @@
     <entry file="file://$PROJECT_DIR$/client/src/_components/ProductInfo/Reviews/ReviewsItem.jsx">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/_components/ProductInfo/Reviews/Reviews.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-193">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/_components/ProductInfo/ProductInfo.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/_components/Pages/Product.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="39" column="16" lean-forward="true" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/_components/Filters/Filters.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -626,13 +599,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/_components/WithLoading.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/_components/Products.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -650,13 +616,73 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/_components/ProductInfo/ProductInfo.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-153">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/assets/scss/_components/_product.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-663" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/_constants/app.constants.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/assets/scss/_components/_recommendations.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/_components/Pages/Product.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/assets/scss/_components/_slider.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="40" column="48" selection-start-line="40" selection-start-column="48" selection-end-line="40" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/_components/ProductInfo/Reviews/Reviews.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="739">
+          <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/_components/WithLoading.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/_components/Recommendations.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="31" column="69" selection-start-line="31" selection-start-column="69" selection-end-line="31" selection-end-column="69" />
-          <folding>
-            <element signature="e#188#241#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="799">
+          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
         </state>
       </provider>
     </entry>

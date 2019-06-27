@@ -8,12 +8,13 @@ import WithLoading from '../../WithLoading';
 const propTypes = {
   productLoading: PropTypes.bool,
   productId: PropTypes.number,
-  reviews: PropTypes.arrayOf.isRequired,
+  reviews: PropTypes.array,
 };
 
 const defaultProps = {
   productLoading: false,
   productId: 0,
+  reviews: [],
 };
 
 const Reviews = ({
@@ -25,7 +26,7 @@ const Reviews = ({
  }) => {
   const makeReviewsListContent = reviews => (
     reviews && reviews.length
-      ? reviews.map(review => <ReviewsItem review={review} key={+review.createdAt} />)
+      ? reviews.map(review => <ReviewsItem review={review} key={review._id} />)
       : <div className="reviews__empty-message">Для этого товара еще оставляли отзывы</div>
   );
 

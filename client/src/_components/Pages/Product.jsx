@@ -23,11 +23,14 @@ class Product extends Component {
   state = {
     product: {},
     reviews: [],
+    recommendations: [],
   };
 
-  componentDidMount() {
+  async componentDidMount() {
     const pageId = getIdFromUrl('product');
-    this.loadProductData(pageId);
+    await this.loadProductData(pageId);
+    const { data: recommendations } = await this.props.getRecommendationsAction();
+    this.setState({ recommendations });
   }
 
   static getDerivedStateFromProps(nextProps, prevState) {
@@ -58,7 +61,7 @@ class Product extends Component {
   };
 
   render() {
-    const { product, reviews } = this.state;
+    const { product, reviews, recommendations } = this.state;
     const { error } = product;
     const {
       productLoading,
@@ -82,7 +85,7 @@ class Product extends Component {
             createReviewAction={createReviewAction}
             addReviewToReviews={this.addReviewToReviews}
           />
-          <Recommendations />
+          <Recommendations recommendations={recommendations} />
         </div>
       </main>
     );
