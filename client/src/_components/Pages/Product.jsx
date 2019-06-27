@@ -61,8 +61,7 @@ class Product extends Component {
   };
 
   render() {
-    const { product, reviews, recommendations } = this.state;
-    const { error } = product;
+    const { product, product: { error }, reviews, recommendations } = this.state;
     const {
       productLoading,
       createReviewAction,

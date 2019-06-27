@@ -25,12 +25,6 @@ const getProductById = id => (dispatch) => {
   return (productsService.getProductById(id)
     .then((response) => {
       const { data } = response;
-
-      if (data.error) {
-        dispatch(reduce(productsConstants.PRODUCT_FAILURE, data));
-        return Promise.resolve(response);
-      }
-
       dispatch(reduce(productsConstants.PRODUCT_SUCCESS));
       dispatch(reduce(productsConstants.FETCH_PRODUCT, data));
       dispatch(reduce(reviewsConstants.REVIEWS_ADD, data.reviews));
