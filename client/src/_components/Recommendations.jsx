@@ -29,7 +29,7 @@ class Recommendations extends Component {
   renderRecommendations = recommendations => (
     <Slider {...appConstants.RECOMMENDATIONS_SLIDES_SETTINGS}>
       {recommendations.map(recommendation => (
-        <div className="recommendations__item">
+        <div className="recommendations__item" key={recommendation.id}>
           <ProductElement product={recommendation} />
         </div>
       ))}

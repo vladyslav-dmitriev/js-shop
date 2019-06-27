@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Loading from './_shared/Loading';
 
 const propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   isLoading: PropTypes.bool,
 };
 
