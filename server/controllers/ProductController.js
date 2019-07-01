@@ -65,7 +65,7 @@ const ProductController = {
       const data = { ...product._doc, reviews };
       res.send({ data });
     } catch (err) {
-      res.status(200).send({ data: { error: 'error' } });
+      res.status(200).send({ data: { hasError: true } });
     }
   },
 };

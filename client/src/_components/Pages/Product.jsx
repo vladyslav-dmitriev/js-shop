@@ -61,13 +61,13 @@ class Product extends Component {
   };
 
   render() {
-    const { product, product: { error }, reviews, recommendations } = this.state;
+    const { product, product: { hasError }, reviews, recommendations } = this.state;
     const {
       productLoading,
       createReviewAction,
     } = this.props;
 
-    if (error) {
+    if (hasError) {
       return (
         <Redirect push to={{ pathname: pathsConstants.NOTFOUND_PAGE }} />
       );
