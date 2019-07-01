@@ -8,7 +8,8 @@ My pet-project - small online store created with React/Redux, Node/Express/Mongo
 - choose and filter products
 - create and view reviews
 - create order
-- admin notification of order (Telegram Bot API)
+- order notification in the Telegram for the administrator (Telegram Bot API)
+- error catch and notification in the Telegram (Telegram Bot API)
 
 ## Commands
 
