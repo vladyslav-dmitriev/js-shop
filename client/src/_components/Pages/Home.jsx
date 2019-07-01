@@ -55,7 +55,7 @@ class Home extends Component {
     return (
       <main className="main">
         <div className="container">
-          <div className="home__container">
+          <div className="home">
             <div className="home__wrapper">
               <div className="aside">
                 <Filters
