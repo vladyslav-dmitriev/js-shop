@@ -9,6 +9,7 @@ const propTypes = {
 
 const defaultProps = {
   isLoading: false,
+  children: null,
 };
 
 const WithLoading = ({ children, isLoading }) => (

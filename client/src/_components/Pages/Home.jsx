@@ -69,8 +69,7 @@ class Home extends Component {
                 <div className="home__title">Компьютеры и электроника</div>
                 <WithLoading isLoading={productsLoading}>
                   {
-                    products
-                    ? (
+                    products && (
                       <div>
                         <Products products={products} productsLoading={productsLoading} />
                         <Pagination
@@ -80,7 +79,7 @@ class Home extends Component {
                           saveFiltersParamsAction={saveFiltersParamsAction}
                         />
                       </div>
-                    ) : null
+                    )
                   }
                 </WithLoading>
               </div>
