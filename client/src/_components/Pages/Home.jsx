@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { filtersActions, productsActions } from '../../_actions';
@@ -70,7 +70,7 @@ class Home extends Component {
                 <WithLoading isLoading={productsLoading}>
                   {
                     products && (
-                      <div>
+                      <Fragment>
                         <Products products={products} productsLoading={productsLoading} />
                         <Pagination
                           pages={pages}
@@ -78,7 +78,7 @@ class Home extends Component {
                           getAllProducts={this.getAllProducts}
                           saveFiltersParamsAction={saveFiltersParamsAction}
                         />
-                      </div>
+                      </Fragment>
                     )
                   }
                 </WithLoading>
