@@ -18,7 +18,7 @@ const Cart = ({ location }) => {
     return (
       <main className="main">
         <div className="container">
-          <div>
+          <div className="cart">
             <div className="cart__box">
               <div className="cart__title">Заказ успешно оформлен</div>
               <div className="cart__orderId">
