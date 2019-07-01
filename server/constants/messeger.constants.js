@@ -1,7 +1,11 @@
 export const TELEGRAM_TOKEN = '728811285:AAES-Ag_Rnq07wIUkHaPJ_2PRXhGcCwiGOg';
 export const TELEGRAM_PROFILE = 429228903;
+export const TELEGRAM_SETTINGS = {
+  parse_mode: 'HTML'
+};
 
 export default {
   TELEGRAM_TOKEN,
   TELEGRAM_PROFILE,
+  TELEGRAM_SETTINGS,
 };

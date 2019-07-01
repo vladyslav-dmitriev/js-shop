@@ -7,4 +7,5 @@ export { default as recommendationsConstants } from './recommendations.constants
 export { default as reviewsConstants } from './reviews.constants';
 export { default as filtersConstants } from './filters.constants';
 export { default as paginationConstants } from './pagination.constants';
+export { default as errorConstants } from './error.constants';
 export { default as appConstants } from './app.constants';

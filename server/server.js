@@ -8,6 +8,7 @@ import ProductController from './controllers/ProductController';
 import FilterController from './controllers/FilterController';
 import ReviewController from './controllers/ReviewController';
 import OrderController from './controllers/OrderController';
+import ErrorController from './controllers/ErrorController';
 
 const app = express();
 
@@ -32,22 +33,13 @@ app.get('/api/product/:id', ProductController.read);
 app.get('/api/filters', FilterController.index);
 app.post('/api/review', ReviewController.create);
 app.post('/api/order', OrderController.create);
+app.post('/api/error', ErrorController.send);
 
 const staticFiles = express.static(path.join(__dirname, '../../client/build'))
-app.use(staticFiles)
-
-app.get('/cities', (req, res) => {
-  const cities = [
-    {name: 'New York City', population: 8175133},
-    {name: 'Los Angeles',   population: 3792621},
-    {name: 'Chicago',       population: 2695598},
-    {name: 'Kiev',       	population: 2712281},
-  ]
-  res.json(cities)
-});
+app.use(staticFiles);
 
 // any routes not picked up by the server api will be handled by the react router
-app.use('/*', staticFiles)
+app.use('/*', staticFiles);
 
 app.set('port', (process.env.PORT || 3001))
 app.listen(app.get('port'), () => {

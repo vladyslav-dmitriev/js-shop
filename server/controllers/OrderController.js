@@ -34,9 +34,11 @@ ${productObj.name}
 телефон: ${phone}
 e-mail: ${email}`;
 
-      await telegramBot.sendMessage(messegerConstants.TELEGRAM_PROFILE, telegramMessage, {
-        parse_mode: 'HTML',
-      });
+      await telegramBot.sendMessage(
+        messegerConstants.TELEGRAM_PROFILE,
+        telegramMessage,
+        messegerConstants.TELEGRAM_SETTINGS
+      );
       await res.send({ data: order.id });
     } catch (err) {
       res.status(500).send(err);
