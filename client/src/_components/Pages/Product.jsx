@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
-import {productsActions, recommendationsActions, reviewsActions} from '../../_actions';
+import { productsActions, recommendationsActions, reviewsActions } from '../../_actions';
 import { getIdFromUrl } from '../../_helpers/utils';
 import { pathsConstants } from '../../_constants';
 
@@ -24,11 +24,11 @@ class Product extends Component {
     product: {},
     reviews: [],
     recommendations: [],
+    pageId: getIdFromUrl('product'),
   };
 
   async componentDidMount() {
-    const pageId = getIdFromUrl('product');
-    await this.loadProductData(pageId);
+    await this.loadProductData(this.state.pageId);
     const { data: recommendations } = await this.props.getRecommendationsAction();
     this.setState({ recommendations });
   }
