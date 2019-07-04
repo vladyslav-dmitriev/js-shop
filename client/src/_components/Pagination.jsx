@@ -12,7 +12,7 @@ const propTypes = {
 const defaultProps = {};
 
 class Pagination extends Component {
-  renderPagination = (page, pages, handleChangePage) => {
+  renderPaginationItems = (page, pages, handleChangePage) => {
     const paginationItems = [];
     for (let i = 1; i <= pages; i++) {
       paginationItems.push(
@@ -36,8 +36,8 @@ class Pagination extends Component {
       saveFiltersParamsAction,
     } = this.props;
 
-    const paramsForSave = { ...filters.filters, page };
-    const paramsForRequest = { ...filters.filters, page };
+    const paramsForSave = { params: filters.params || {}, page };
+    const paramsForRequest = { ...filters.params, page };
 
     saveFiltersParamsAction(paramsForSave);
     getAllProducts(paramsForRequest);
@@ -47,7 +47,7 @@ class Pagination extends Component {
     const { filters: { page }, pages } = this.props;
     return (
       <ul className="pagination">
-        {this.renderPagination(page, pages, this.handleChangePage)}
+        {this.renderPaginationItems(page, pages, this.handleChangePage)}
       </ul>
     );
   }
